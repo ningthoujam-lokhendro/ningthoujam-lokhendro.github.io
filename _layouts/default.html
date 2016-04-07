@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  {% include base.html %}
+  {% include {{site.theme}}/head.html %}
+
+  <body>
+
+    {% include {{site.theme}}/header.html %}
+
+    {{ content }}
+
+    {% include {{site.theme}}/footer.html %}
+
+    {% include {{site.theme}}/scripts.html %}
+
+  </body>
+
+</html>

@@ -1,16 +1,23 @@
----
-layout: default
----
-<div class="container">
-<article class="post">
+<!DOCTYPE html>
+<html>
+{% include base.html %}
+{% include {{site.theme}}/head.html %}
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+<body>
+<div class="wrapper">
+{% include {{site.theme}}/header-blog.html %}
 
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-</article>
+<div id="fh5co-blog" data-section="blogs">
+	<div class="container">
+		{{ content }}
+	</div>
 </div>
+<div class="push"></div>
+</div>
+{% include {{site.theme}}/footer.html %}
+
+{% include {{site.theme}}/scripts.html %}
+
+</body>
+
+</html>

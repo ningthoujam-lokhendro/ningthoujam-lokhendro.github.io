@@ -1,4 +1,4 @@
-@font-face {
+  @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
@@ -20,7 +20,7 @@ body {
   color: #7f7f7f;
   background: #fff;
   height: 100%;
-  position: relative;
+  /*position: relative;*/
 }
 
 a {
@@ -231,8 +231,8 @@ h1, h2, h3, h4, h5, h6 {
 .section-heading {
   float: left;
   width: 100%;
-  padding-bottom: 50px;
-  margin-bottom: 50px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   clear: both;
 }
 .section-heading h2 {
@@ -242,11 +242,11 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   position: relative;
   display: block;
-  padding-bottom: 20px;
-  line-height: 1.5;
+  /*padding-bottom: 20px;
+  line-height: 1.5;*/
 }
 .section-heading h2:after {
-  content: "";
+  /*content: "";*/
   position: absolute;
   display: block;
   width: 80px;
@@ -279,14 +279,16 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 
+
 #fh5co-our-services,
 #fh5co-about-us,
 #fh5co-features,
 #fh5co-testimonials,
 #fh5co-pricing,
 #fh5co-press {
-  padding: 7em 0;
+  padding-top: 4em;
 }
+
 @media screen and (max-width: 480px) {
   #fh5co-our-services,
   #fh5co-about-us,
@@ -299,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fh5co-testimonials {
-  background: #ff6600;
+  background: #3C763D;
 }
 #fh5co-testimonials .section-heading h2 {
   color: white;
@@ -326,12 +328,13 @@ h1, h2, h3, h4, h5, h6 {
   border-left: none;
   padding: 40px;
   background: #fff;
-  position: relative;
+  /*position: relative; NO quote author*/
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px;
 }
+/*
 #fh5co-testimonials .box-testimony blockquote:after {
   content: "";
   position: absolute;
@@ -341,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top-color: #fff;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-}
+}*/
 #fh5co-testimonials .box-testimony blockquote .quote {
   position: absolute;
   top: 0;
@@ -354,7 +357,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 56px;
   height: 56px;
   margin-top: -30px;
-  background: #ff6600;
+  background: #3C763D;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1102,10 +1105,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 2em;
   }
 }
-
+/*
 .row-bottom-padded-sm {
   padding-bottom: 2em;
-}
+}*/
 @media screen and (max-width: 768px) {
   .row-bottom-padded-sm {
     padding-bottom: 2em;
@@ -1120,8 +1123,3 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*# sourceMappingURL=orange.css.map */
-/*set position and height for blog*/
-#fh5co-blog {
-  top: 85px;
-  position: relative;
-}

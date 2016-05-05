@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html>
-{% include base.html %}
-{% include {{site.theme}}/head.html %}
-
+  {% include base.html %}
+  {% include {{site.theme}}/head.html %}
 <body>
 
-{% include {{site.theme}}/header-blog.html %}
+    {% include {{site.theme}}/header-blog.html %}
 
-<div id="fh5co-blog" data-section="blogs">
-  <div class="container">
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="container fh5co-blog">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-      </header>
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+              <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+          </header>
 
-      <div class="post-content" itemprop="articleBody">
-        {{ content }}
+          <div class="post-content" itemprop="articleBody">
+            {{ content }}
+          </div>
+
+        </article>
       </div>
 
-    </article>
-  </div>
-</div>
+{% include {{site.theme}}/footer.html %}
 
 {% include {{site.theme}}/scripts.html %}
 

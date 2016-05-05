@@ -1,0 +1,31 @@
+{% for category in site.categories %}
+<div id="{{ category | first }}">
+<div id="fh5co-testimonials"  data-section="{{ category | first }}">		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">{{ category | first }}</h2>
+				</div>
+			</div>
+			<div class="row">
+				{% for posts in category %}
+			 	 {% for post in posts %}
+      		  	  {% if post.title != nil %}
+				<div class="col-md-4">
+					
+					<div class="box-testimony to-animate">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quote-left"></i></span></span>
+							<a href="{{post.url}}"><h3>{{ post.title }}</h3></a>
+							<p>{{ post.excerpt }}</p>
+						</blockquote>
+					</div>
+				</div>
+				{% endif %}
+      		  {% endfor %}
+      		 {% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endfor %}

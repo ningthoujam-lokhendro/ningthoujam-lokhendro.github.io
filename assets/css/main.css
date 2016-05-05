@@ -12,18 +12,26 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     color: #159957;  }
 
-* {
-margin: 0;
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
 }
-html, body {
-height: 100%;
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
 }
-.wrapper {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin: 0 auto -4em;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
 }
-.footer, .push {
-height: 4em;
+/*set position and height for blog*/
+.fh5co-blog {
+  top: 85px;
+  position: relative;
+  padding-bottom: 65px;
 }

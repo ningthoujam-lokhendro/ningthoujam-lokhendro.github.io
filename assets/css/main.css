@@ -5,6 +5,7 @@ body {
     font-size: large;
     line-height: 1.5;
     color: #606c71;
+    background: url(/assets/fh5co/images/cream-paper.png) center top repeat;
 }
 h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;

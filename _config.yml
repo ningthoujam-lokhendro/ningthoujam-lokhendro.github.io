@@ -20,3 +20,6 @@ author:	Ningthoujam Lokhendro
 markdown: kramdown
 
 theme: themes/fh5co
+
+gems:
+  - jekyll-gist

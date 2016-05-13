@@ -4,7 +4,7 @@ body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;
     line-height: 1.5;
-    color: #606c71;
+    color: #000000; ##606c71;
     background: url(/assets/fh5co/images/cream-paper.png) center top repeat;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -35,4 +35,8 @@ body {
   top: 85px;
   position: relative;
   padding-bottom: 65px;
+}
+.img-left {
+    float: left;
+    margin: 0px 20px 0 0;
 }

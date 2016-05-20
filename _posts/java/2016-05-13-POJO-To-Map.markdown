@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "POJO to Map Conversion"
-date:   2014-04-03 23:33:05 +0530
+date:   2016-05-13 23:33:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
 ---
@@ -21,7 +21,7 @@ More details for the [Introspector][Introspector]
 <script src="https://gist.github.com/ningthoujam-lokhendro/fbc0ca3cf51333a230b4.js?file=IntrospectorExample.java"></script>
 
 ## Jackson Databind.
-[Jackson][Jackson] is a good library to with lots of other features. 
+[Jackson][Jackson] is a good library with lots of other features. 
 <script src="https://gist.github.com/ningthoujam-lokhendro/fbc0ca3cf51333a230b4.js?file=JacksonExample.java"></script>
 
 [Apache Common BeanUtils]: https://commons.apache.org/proper/commons-beanutils/download_beanutils.cgi

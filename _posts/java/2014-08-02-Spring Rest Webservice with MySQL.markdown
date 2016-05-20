@@ -17,11 +17,14 @@ couple togerther to produce a ReST web service will be understanable..
 
 ## Application Use-Case
 Expose a ReST Web-Service that can get Device details with MAC address.
+
 #### Get Device By MAC address
-http://localhost:port/DeviceDetail/REST/getDeviceByMAC/{macaddress}
-Expose a ReST Web-Service that can get List of Device with Manufacturer.
+
+`http://localhost:port/DeviceDetail/REST/getDeviceByMAC/{macaddress}`
+Expose a ReST Web-Service that can get Device with mac address.
+
 #### Get Device By Manufacturer
-http://localhost:port/DeviceDetail/REST/getDeviceByManufacturer/{manufacturer}
+`http://localhost:port/DeviceDetail/REST/getDeviceByManufacturer/{manufacturer}` Expose a Expose a ReST Web-Service that can get List of Device with Manufacturer.
 
 ## Create maven project
 {% highlight shell %}
@@ -69,6 +72,7 @@ Open the pom.xml in text editor.Add the following properties.
 </properties>
 {% endhighlight %}
 Add the following dependencies.
+<script src="http://gist-it.appspot.com/https://github.com/ningthoujam-lokhendro/DeviceDetail/blob/master/pom.xml?slice=19:59&footer=0"></script>
 {% highlight xml %}
 <!-- Spring Dependencies -->
 <dependency>

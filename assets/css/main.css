@@ -40,16 +40,7 @@ body {
     float: left;
     margin: 0px 20px 0 0;
 }
-/* Better styles for embedding GitHub Gists */
-/*.gist {
-   max-width:600px;
-   overflow:auto;
-}*/
 
-.gist .blob-wrapper.data {
-   max-height:600px;
-   overflow:auto;
-}
-.row-bottom-padded-sm {
-  padding-top: 10px;
+.kbd {
+  background-color: #00e24b;
 }

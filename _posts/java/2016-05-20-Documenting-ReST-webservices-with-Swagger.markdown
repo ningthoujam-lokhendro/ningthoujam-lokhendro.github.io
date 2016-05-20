@@ -7,7 +7,7 @@ author:	Ningthoujam Lokhendro
 ---
 Documenting ReST webservice is a must and it is also tidius task. With every minor change in the api, documentating becomes to difficult to track. With [Springfox-swagger][Springfox-swagger], it takes a the documentation to a breeze with dynmic documentaion. Here is a quick look on how to document rest api dynamically.
 
-##<i class="glyphicon glyphicon-pushpin" /> Dependencies
+## <span class="glyphicon glyphicon-pushpin" ></span> Dependencies
 The following maven dependencies are to be added.
 {% highlight xml %}
 <properties>
@@ -27,11 +27,11 @@ The following maven dependencies are to be added.
 </dependency>
 {% endhighlight %}
 
-##<i class="glyphicon glyphicon-pushpin" /> Configuration Class
+## <span class="glyphicon glyphicon-pushpin"></span> Configuration Class
 The following configuration class in spring configuration is used to configure the springfox. More for information, refer [springfox documentaion][springfox documentaion]
 <script src="https://gist-it.appspot.com/github/ningthoujam-lokhendro/DeviceDetail/blob/master/redis-device-oui/src/main/java/com/ningzeta/deviceOUI/config/SwaggerConfiguration.java?footer=0&slice=22:0"></script>
 
-##<i class="glyphicon glyphicon-pushpin" /> Add Resource Handler
+## <span class="glyphicon glyphicon-pushpin"></span> Add Resource Handler
 Spring class to handle resource via configuration to expose the resources of the webjar.
 <script src="https://gist-it.appspot.com/github/ningthoujam-lokhendro/DeviceDetail/blob/master/redis-device-oui/src/main/java/com/ningzeta/deviceOUI/config/WebConfiguration.java?footer=0&slice=18:0"></script>
 

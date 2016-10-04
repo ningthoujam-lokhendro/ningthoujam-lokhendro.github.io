@@ -3,6 +3,7 @@ layout: post
 title:  "Increase the size of linux lvm by adding new disk"
 date:   2016-08-01 12:22:05 +0530
 category:	"Linux"
+tags: ['linux','fdisk']
 author:	Ningthoujam Lokhendro
 ---
 The Linux Logical Volume Manager(lvm) can be increase when adding a new disk. This is usually usefull when working in virtual machine to add new disk space.
@@ -12,7 +13,7 @@ The Linux Logical Volume Manager(lvm) can be increase when adding a new disk. Th
 
 ## Initial Disk state
 First before adding the new disk, check the disk state.
-{% highlight shell %}
+{% highlight bash %}
 [root@localhost ~]# fdisk -l
 
 Disk /dev/sda: 34.4 GB, 34359738368 bytes
@@ -32,7 +33,7 @@ Partition 2 does not end on cylinder boundary.
 From the above, /dev/sda2 is listed as `Linux LVM` and has ID of 8e. Refer [wikipedia for more info on the partition types.][1]
 
 Now to see the disk size which will be increase after adding the new disk,
-{% highlight shell %}
+{% highlight bash %}
 [motive@localhost ~]$ df -h
 Filesystem            Size  Used Avail Use% Mounted on
 /dev/mapper/rootvg-rootvol
@@ -48,7 +49,7 @@ The process to add will be different for different vendor. Following the instruc
 
 ## Detect new virtual disk.
 Issue the `fdisk -l` again to detect the new disk.
-{% highlight shell %}
+{% highlight bash %}
 [root@localhost opt]# fdisk -l
 
 Disk /dev/sda: 34.4 GB, 34359738368 bytes
@@ -76,7 +77,7 @@ A new disk is detected with __Disk /dev/sdb: 34.4 GB__
 
 ## Partition the new disk
 Follow the command below:
-{% highlight shell %}
+{% highlight bash %}
 # choose the disk to partition
 [root@localhost opt]# fdisk /dev/sdb
 # choose n for new partition
@@ -107,20 +108,20 @@ Syncing disks.
 {% endhighlight %}
 
 Issuing `fdisk -l` will list the new partition now.
-{% highlight shell %}
+{% highlight bash %}
    Device Boot      Start         End      Blocks   Id  System
 /dev/sdb1               2       32768    33553408   8e  Linux LVM
 {% endhighlight %}
 
 ## Increasing the Logical Volume
 First lets create the physical volume with `pvcreate`
-{% highlight shell %}
+{% highlight bash %}
 [root@localhost opt]# pvcreate /dev/sdb1
   Physical volume "/dev/sdb1" successfully created
 {% endhighlight %}
 
 Confirm the volume group
-{% highlight shell %}
+{% highlight bash %}
 [root@localhost opt]# vgdisplay
   --- Volume group ---
   VG Name               rootvg
@@ -128,7 +129,7 @@ Confirm the volume group
 {% endhighlight %}
 
 Now lets extend the volume rootvg using `vgextend`.
-{% highlight shell %}
+{% highlight bash %}
 [root@localhost opt]# vgextend rootvg /dev/sdb1
   Volume group "rootvg" successfully extended
 # confirm the physical volume change
@@ -139,7 +140,7 @@ Now lets extend the volume rootvg using `vgextend`.
 {% endhighlight %}
 
 Next lets extend the logical volume
-{% highlight shell %}
+{% highlight bash %}
 [root@localhost opt]# lvextend /dev/rootvg/rootvol /dev/sdb1
   Size of logical volume rootvg/rootvol changed from 29.78 GiB (953 extents) to 61.75 GiB (1976 extents).
   Logical volume rootvol successfully resized
@@ -152,7 +153,7 @@ Next lets extend the logical volume
 
 # Resize 
 Finally to use the new extended volume, run the resize2fs
-{% highlight shell %}
+{% highlight bash %}
 [root@localhost opt]# resize2fs /dev/rootvg/rootvol
 resize2fs 1.41.12 (17-May-2010)
 Filesystem at /dev/rootvg/rootvol is mounted on /; on-line resizing required
@@ -162,7 +163,7 @@ The filesystem on /dev/rootvg/rootvol is now 16187392 blocks long.
 {% endhighlight %}
 
 Finally check the diskspace:
-{% highlight shell %}
+{% highlight bash %}
 [root@localhost opt]# df -h
 Filesystem            Size  Used Avail Use% Mounted on
 /dev/mapper/rootvg-rootvol

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+      
+      <div class="fh5co-blog">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+              <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+          </header>
+
+          <div class="post-content" itemprop="articleBody">
+            {{ content }}
+          </div>
+
+          {% include posts/comments.html %}
+
+        </article>
+      </div>
+
+    </div>
+    <div class="col-xs-6 col-md-4 sidebar">
+      <ul class="listless margin-top-reset">
+        {% include posts/sidebar.html %}
+      </ul>
+      
+    </div>
+    
+  </div>
+</div>

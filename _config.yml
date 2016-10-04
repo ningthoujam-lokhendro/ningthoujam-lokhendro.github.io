@@ -19,3 +19,4 @@ author:	Ningthoujam Lokhendro
 # Build settings
 markdown: kramdown
 
+emptyArray: []

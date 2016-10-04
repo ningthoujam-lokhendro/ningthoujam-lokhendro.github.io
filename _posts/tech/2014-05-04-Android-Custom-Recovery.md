@@ -4,7 +4,7 @@ title:  "Android Custom Recovery"
 date:   2014-05-10 22:22:05 +0530
 category:	"Everyday Tech"
 author:	Ningthoujam Lokhendro
-tags: ['android','custom rom','ClockworkMod']
+tags: ['android','custom rom','ClockworkMod','rooting']
 ---
 In Android, recovery is a software that is distinct and separate from the ROM installed operation system. It has its own partition and is booted when certain keys are press togerther. Installed operation system is one you interact with the device to make call, install apps, take pic etc. Recovery on the other hand is used in the system update, diagnostic and perform factory reset of the android system. They comes handy when installing new ROM, updating ROM and even fixing when the installed ROM fails to boot the device.
 

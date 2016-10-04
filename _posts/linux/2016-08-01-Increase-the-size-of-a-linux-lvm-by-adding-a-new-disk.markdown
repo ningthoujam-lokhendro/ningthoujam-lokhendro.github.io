@@ -14,7 +14,7 @@ The Linux Logical Volume Manager(lvm) can be increase when adding a new disk. Th
 ## Initial Disk state
 First before adding the new disk, check the disk state.
 {% highlight bash %}
-[root@localhost ~]# fdisk -l
+[motive@localhost ~]# fdisk -l
 
 Disk /dev/sda: 34.4 GB, 34359738368 bytes
 64 heads, 32 sectors/track, 32768 cylinders

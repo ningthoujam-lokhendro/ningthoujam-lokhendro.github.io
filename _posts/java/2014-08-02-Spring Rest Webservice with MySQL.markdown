@@ -4,6 +4,7 @@ title:  "Spring ReST Webservice with MySQL"
 date:   2014-04-27 22:22:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
+tags: ['Spring','MySQL','rest']
 ---
 The following tutorial is for creating simple Spring ReST webservice with MySQL. We are going to use Spring framwork to create this simple rest webservice that get data from the database.
 
@@ -138,22 +139,22 @@ With that in mind, lets create a DTO for the Device as stated below code.
 {% highlight java %}
 package com.ningzeta.devicedetail.model.dto;
 public class DeviceDTO {
-     
+
     private String mac;
     private String manufacturer;
-     
+
     public String getMac() {
         return mac;
     }
-     
+
     public void setMac(String mac) {
         this.mac = mac;
     }
-     
+
     public String getManufacturer() {
         return manufacturer;
     }
-     
+
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
@@ -166,29 +167,29 @@ Data Access Object (DAO) is an object that provides an abstract interface to som
 So lets create an interface that would suffix for out application.
 {% highlight java %}
 package com.ningzeta.devicedetail.dao;
- 
+
 import java.util.List;
- 
+
 import javax.sql.DataSource;
- 
+
 import com.ningzeta.devicedetail.model.dto.DeviceDTO;
- 
+
 public interface DeviceDAO {
-     
+
     /**
      * This is the method to be use to initialize database
      * resources.
      * @param dataSource
      */
     public void setDataSource(DataSource dataSource) ;
-     
+
     /**
      * Get Device details for a given MAC.
      * @param mac.
      * @return Device.
      */
     public DeviceDTO getDeviceByMAC(String mac);
-     
+
     /**
      * Get list of Devices for a given Manufacturer
      * @param mac
@@ -202,27 +203,27 @@ public interface DeviceDAO {
 Now lets implement our DAO. Here in this class, we are defining the behavior how the data are set and get as an Object. We will be using the `dataSource` that is defined in the spring bean. This is describe in the next section.
 {% highlight java %}
 package com.ningzeta.devicedetail.dao.impl;
- 
+
 import java.util.List;
 import javax.sql.DataSource;
- 
+
 import org.springframework.jdbc.core.JdbcTemplate;
- 
+
 import com.ningzeta.devicedetail.dao.DeviceDAO;
 import com.ningzeta.devicedetail.model.DeviceMapper;
 import com.ningzeta.devicedetail.model.dto.DeviceDTO;
- 
+
 public class DeviceDAOImpl implements DeviceDAO{
-     
+
     private DataSource dataSource;
     private JdbcTemplate jdbcTemplateObj;
- 
+
     @Override
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         this.jdbcTemplateObj = new JdbcTemplate(dataSource);
     }
- 
+
     @Override
     public DeviceDTO getDeviceByMAC(String mac) {
         String SQL = "select * from DeviceDetails where mac = ?";
@@ -232,7 +233,7 @@ public class DeviceDAOImpl implements DeviceDAO{
                                                       );
         return device;
     }
- 
+
     @Override
     public List<DeviceDTO> getDeviceByManufacturer(String manufacturer) {
         String SQL = "select * from DeviceDetails where manufacturer = ?";
@@ -242,7 +243,7 @@ public class DeviceDAOImpl implements DeviceDAO{
                                                     );
         return devices;
     }
- 
+
 }
 {% endhighlight %}
 
@@ -250,22 +251,22 @@ public class DeviceDAOImpl implements DeviceDAO{
  The JDBC Object mapper class define how the data retrieved from the database is going to mapped to the Object defined in the DTO.
 {% highlight java %}
 package com.ningzeta.devicedetail.model;
- 
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
- 
+
 import org.springframework.jdbc.core.RowMapper;
- 
+
 import com.ningzeta.devicedetail.model.dto.DeviceDTO;
- 
+
 public class DeviceMapper implements RowMapper<DeviceDTO>{
- 
+
     @Override
     public DeviceDTO mapRow(ResultSet resultSet, int arg1) throws SQLException {
         DeviceDTO device = new DeviceDTO();
         device.setMac(resultSet.getString("mac"));
         device.setManufacturer(resultSet.getString("manufacturer"));
-         
+
         return device;
     }
 }
@@ -284,7 +285,7 @@ Here in this case, the bean `dataSource` defined the database connection paramet
    <property name="username" value="root"/>
    <property name="password" value="system"/>
 </bean>
- 
+
 <!-- Definition for deviceJDBCTemplate bean -->
 <bean id="deviceDAO"
    class="com.ningzeta.devicedetail.dao.impl.DeviceDAOImpl">
@@ -306,7 +307,7 @@ This is defined in the web.xml
       </servlet-class>
       <load-on-startup>1</load-on-startup>
 </servlet>
-  
+
  <servlet-mapping>
       <servlet-name>rest</servlet-name>
       <url-pattern>/*</url-pattern>
@@ -320,7 +321,7 @@ Now lets create the ‘rest-servlet.xml’ that defined how the framework would 
 <!-- Component are scan in the following package.
         This is where the Controller will reside. -->
 <context:component-scan base-package="com.ningzeta.devicedetail.controller" />
- 
+
 <!-- This is annotation driven -->
 <mvc:annotation-driven />
 {% endhighlight %}
@@ -330,7 +331,7 @@ Now lets create the Service Controller where the Dispatcher Sevlet scan and let 
 
 `@RequestMapping` annotation is used for defining incoming request urls for class and method levels. In this case two uri’s in the format `<root-url>/REST/getdevicebymac/{mac}/` and `<root-url>/REST/getdevicebymanufacturer/{manufacturer}` will be routed to this Controller respective method annotated . With `@RequestMapping` annotation, we can only define generic uri mappings. For dynamic uri mappings in case of passing variables along with the uri, `@PathVariable` is used. Here in this case, we pass a variable `mac` along with the uri such as, `<root-url>/REST/getdevicebymac/123456/`. Here the last parameter (123456) in the uri is retrieved using `@PathVariable`.
 
-Using `<mvc:annotation-config>` tag instead of view resolver, we use `@ResponseBody` annotation to return response data directly from controller. But in the above code, we have not used `@ResponseBody`. This is because, in Spring MVC 4.0,  @RestController is introduced such that we need not use `@ResponseBody` tag in each and every method. `@RestController` will handle all of that at the type level. This annotation simplifies the controller and it has `@Controller` and `@ResponseBody` annotated within itself. 
+Using `<mvc:annotation-config>` tag instead of view resolver, we use `@ResponseBody` annotation to return response data directly from controller. But in the above code, we have not used `@ResponseBody`. This is because, in Spring MVC 4.0,  @RestController is introduced such that we need not use `@ResponseBody` tag in each and every method. `@RestController` will handle all of that at the type level. This annotation simplifies the controller and it has `@Controller` and `@ResponseBody` annotated within itself.
 
 More at
 [Spring @RestController][Spring @RestController]
@@ -339,42 +340,42 @@ More at
 
 {% highlight java %}
 package com.ningzeta.devicedetail.controller;
- 
+
 import java.util.List;
- 
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
- 
+
 import com.ningzeta.devicedetail.dao.impl.DeviceDAOImpl;
 import com.ningzeta.devicedetail.model.dto.DeviceDTO;
- 
+
 @RestController
 public class ServiceController {
- 
+
     ApplicationContext appContext = new ClassPathXmlApplicationContext("SpringBeans.xml");
-     
+
     DeviceDAOImpl ddImpl = (DeviceDAOImpl) appContext.getBean("deviceDAO");
-     
+
     @RequestMapping(value = "/REST/getdevicebymac/{mac}",
                     method = RequestMethod.GET)
     public DeviceDTO getDeviceByMAC(@PathVariable String mac){
- 
+
         DeviceDTO device = ddImpl.getDeviceByMAC(mac);
         return device;
     }
-     
+
     @RequestMapping(value = "/REST/getdevicebymanufacturer/{manufacturer}",
                     method = RequestMethod.GET)
     public List<DeviceDTO> getDeviceByManufacturer(@PathVariable String manufacturer) {
-         
+
         List<DeviceDTO> deviceList = ddImpl.getDeviceByManufacturer(manufacturer);
         return deviceList;
     }
- 
+
 }
 {% endhighlight %}
 

@@ -4,6 +4,11 @@ title:  "Python Errors and Exceptions"
 date:   2014-05-14 12:22:05 +0530
 category:	"Python"
 author:	Ningthoujam Lokhendro
+tags:
+- python
+- Error
+- Exceptions
+excerpt: Python error and exceptions are discuss and how they are handle. Handling error and exceptions can be done in various ways.
 ---
 
 Before writing an application its important to understand and implement Error/Exception for any programming language. I will try to modestly describe the Python errors and exceptions on this article. There are already many documentation that describe and even whole section of books in this but lets see briefly and to the point. That’s all about python programming.
@@ -91,7 +96,7 @@ Say you are reading a file and the file is not there, do you want the exception 
 
 {% highlight Python %}
 from os.path import isfile
- 
+
 if not isfile(some_file):
     raise IOError("No File with name " + some_file + " in " + getcwd())
 {% endhighlight %}
@@ -104,10 +109,10 @@ User-defined exception are those exception which you can define the type by decl
 {% highlight Python %}
 #custom exception
 class MyException(Exception):
- 
+
 def __init__(self, value):
    self.parameter = value
- 
+
 def __str__(self):
    return repr(self.parameter)
 {% endhighlight %}
@@ -120,7 +125,7 @@ Both the function __init__() and __str__() are overridden from the main “Excep
 Taking this as an example using the previous check to raise the exception would be:
 {% highlight Python %}
 from os.path import isfile
- 
+
 if not isfile(some_file):
 	raise MyException("No File with name " + some_file + " in " + getcwd())
 {% endhighlight %}

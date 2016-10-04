@@ -8,9 +8,9 @@
 # Site settings
 title: NingZeta
 email: lokhendro At gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   Github repositories and blogs from Ningthoujam Lokhendro.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: ""
 url: "http://ningthoujam-lokhendro.github.io" # the base hostname & protocol for your site
 twitter_username: ning_lok
 github_username:  ningthoujam-lokhendro
@@ -18,5 +18,3 @@ author:	Ningthoujam Lokhendro
 
 # Build settings
 markdown: kramdown
-
-emptyArray: []

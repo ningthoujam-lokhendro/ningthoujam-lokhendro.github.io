@@ -151,7 +151,7 @@ Next lets extend the logical volume
   VG Size               63.75 GiB
 {% endhighlight %}
 
-# Resize 
+# Resize
 Finally to use the new extended volume, run the resize2fs
 {% highlight bash %}
 [root@localhost opt]# resize2fs /dev/rootvg/rootvol

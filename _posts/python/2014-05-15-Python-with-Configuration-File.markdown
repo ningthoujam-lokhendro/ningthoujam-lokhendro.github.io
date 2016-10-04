@@ -4,11 +4,15 @@ title:  "Python with Configuration File."
 date:   2014-05-15 22:22:05 +0530
 category:	"Python"
 author:	Ningthoujam Lokhendro
+tags:
+- python
+- configuration file
+excerpt: Describe about the configuration file and how it is parse and used in python. Other tricks are also shown how to parse configuration file without section.
 ---
-<img class="img-responsive img-left" src="{{{baseurl}}/assets/images/Configparser.jpg">
+<img class="img-responsive img-left" src="{{baseurl}}/assets/images/Configparser.jpg">
 Reading configuration or properties file is a basic ingredient that is used in most of the scripting and full feature language. There are in-build library and other 3rd party library to read this type of type with ease. We can even use simple file reader but the ease of using such library makes the properties or configuration file awesome.
 
-In python if you ever encounter to read such key/value type file, ConfigParser is the one that you should use. The `Configparser module` contains most the needs that you would have to use a configuration type files and won`t need to implemente your own parser.
+In python if you ever encounter to read such key/value type file, ConfigParser is the one that you should use. The `Configparser module` contains most the needs that you would have to use a configuration type files and won't need to implement your own parser.
 
 First lets discuss what is what is configuration file type. If you are familiar you can skip this part.
 
@@ -16,7 +20,7 @@ First lets discuss what is what is configuration file type. If you are familiar 
 Configuration file are those that have key/value type data. The separator would be either “:” or “=” with key in left side and value at right side. Comments are also allowed in such type with “#” or “;”. Leading white space are remove from the value. It also contain section part with “[this_is_section_header]” to differentiate and scope the keys. The file type can be of anything but mostly used are : cgf, ini, properties etc.
 
 Example:
-{% highlight .properties %}
+{% highlight properties %}
 [Oracle]
 # This is a comment
 Username = ibobi
@@ -25,7 +29,7 @@ Host = localhost
 Sid = system
 Port = 1521
 
-[mysql] 
+[mysql]
 Username = tom
 Password = yahoo
 Host = newHost
@@ -33,8 +37,8 @@ Host = newHost
 
 It also support `interpolation` which means you can specify to refer other key(option) using “%option” but this can be parse using Configparser.SafeConfigParser().
 
-{% highlight .properties %}
-[installation] 
+{% highlight properties %}
+[installation]
 Home = /opt/app/oracle
 Oracle.home = %home/product/db_1
 {% endhighlight %}
@@ -61,13 +65,13 @@ def read_config_file(conf_file):
      return conf
 {% endhighlight %}
 
-Now you can define a function that extract the require information. This way you don`t have to read the file multiple time and use the instance.
+Now you can define a function that extract the require information. This way you don't have to read the file multiple time and use the instance.
 
 {% highlight Python %}
 #get oracle details
- 
+
 def get_install_dir(conf):
- 
+
      try:
          username = conf.get('oracle', 'username')
          print ‘Username is {0}’.format(username)
@@ -91,14 +95,14 @@ To write to Configuration file:
 
 {% highlight Python %}
 from ConfigParser import SafeConfigParser
- 
+
 config = SafeConfigParser()
- 
+
 def write_conf(section, option, value):
      config.set(section, option, value)
      my_dict = {'joe':'20', 'jone':'34', 'tom':'25', 'lucy':'26'}
      config.add_section('Details')
- 
+
 for key,value in my_dict.iteritems():
      write_conf('Details',key,value)
      with open('hello.cfg','wb') as fp:
@@ -109,7 +113,7 @@ config.write(fp)
 ## Reading configuration file without Section
 Java property file with extension properties or any configuration that does not have section would be problem to read as the ConfigParser API need section to get the key/value.
 
-{% highlight .properties %}
+{% highlight properties %}
 lucy = 26
 joe = 20
 jone = 34
@@ -120,25 +124,25 @@ The solution is to create a fake section by initializing from a class and read t
 
 {% highlight Python %}
 from ConfigParser import SafeConfigParser
- 
+
 config = SafeConfigParser()
- 
+
 class FakeSecHead(object):
- 
+
      def __init__(self, fp):
      	self.fp = fp
      	self.sechead = '[asection]\n'
- 
+
      def readline(self):
      	if self.sechead:
         	try:
         		return self.sechead
         	finally:
         		self.sechead = None
-     	else: 
+     	else:
      		return self.fp.readline()
- 
+
 config.readfp(FakeSecHead(open('nosection.properties')))
- 
+
 config.items('asection')
 {% endhighlight %}

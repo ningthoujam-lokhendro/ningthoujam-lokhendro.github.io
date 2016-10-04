@@ -4,6 +4,7 @@ title:  "Installing JDK at Linux."
 date:   2014-04-03 22:22:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
+tag:  ['installation']
 ---
 Default java that comes with most distros are openjdk. Oracle JDK is indeed needed for development or deployment, so here is a brief steps to install JDK <version> at your newly installed distros.
 

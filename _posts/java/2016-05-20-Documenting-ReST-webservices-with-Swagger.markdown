@@ -4,8 +4,13 @@ title:  "Documenting ReST webservices with Swagger"
 date:   2016-05-20 09:33:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
+tags:
+- swagger
+- spring-fox
+- spring
+excerpt: Webservice documentaion is a good way to show the api that are exposed. Using swagger annotation and let swagger generate the documentation is pretty neat. 
 ---
-Documenting ReST webservice is a must and it is also tidius task. With every minor change in the api, documentating becomes to difficult to track. With [Springfox-swagger][Springfox-swagger], it takes a the documentation to a breeze with <kbd>dynamic documentaion</kbd>. Here is a quick look on how to document rest api dynamically.
+Documenting ReST webservice is a must and it is also tedius task. With every minor change in the api, documentation becomes to difficult to track. With [Springfox-swagger][Springfox-swagger], it takes a the documentation to a breeze with <kbd>dynamic documentaion</kbd>. Here is a quick look on how to document rest api dynamically.
 
 ## <span class="glyphicon glyphicon-pushpin" ></span> Dependencies
 The following maven dependencies are to be added.

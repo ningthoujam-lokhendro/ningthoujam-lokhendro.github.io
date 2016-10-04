@@ -6,8 +6,8 @@ category:	"Everyday Tech"
 author:	Ningthoujam Lokhendro
 ---
 
-<img class="img-responsive" style="float: left;" src="{{{baseurl}}/assets/images/Root.png">
-Who can root android devices? 
+<img class="img-responsive" style="float: left;" src="{{baseurl}}/assets/images/Root.png">
+Who can root android devices?
 The answer is anyone with basic working knowledge of computer, smartphone can – Anyone can root Android Device.This step by step tutorial will guide you to root your android device. But before that, understanding of what rooting means is needed to know what you will be getting out of it and what you will not
 
 ## What is Rooting Android device?

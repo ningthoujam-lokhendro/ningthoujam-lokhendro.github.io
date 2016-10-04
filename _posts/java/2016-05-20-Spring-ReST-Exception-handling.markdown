@@ -4,6 +4,10 @@ title:  "Spring ReST Exception handling"
 date:   2015-05-20 16:40:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
+tags:
+- spring
+- error
+- exception
 ---
 
 Handling excpetion in Spring web application and returing them to the client meaningfully is important part of the application design.

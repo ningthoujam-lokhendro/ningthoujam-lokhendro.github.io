@@ -4,8 +4,10 @@ title:  "Installing Python in Linux or Solaris."
 date:   2014-04-03 22:22:05 +0530
 category:	"Python"
 author:	Ningthoujam Lokhendro
+tags: ['python','installation','pip']
+excerpt: In this post, discussion are made on how to install python and its environment.
 ---
-<img class="img-responsive" src="{{{baseurl}}/assets/images/PythonAndLinux.png">
+<img class="img-responsive" src="{{baseurl}}/assets/images/PythonAndLinux.png">
 Installing Python in Linux or Solaris can be messy as python is link to the most the system programs.
 
 Here i will show how to install Python at Redhat without un-installing the system in-build python. This tutorial will download the source and build so the same procedure can be use in other distros.

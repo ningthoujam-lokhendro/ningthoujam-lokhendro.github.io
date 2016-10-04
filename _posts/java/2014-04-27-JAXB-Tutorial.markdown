@@ -4,8 +4,9 @@ title:  "JAXB Tutorial"
 date:   2014-04-27 22:22:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
+tags: ['jaxb']
 ---
-JAXB stands for **J**ava **A**rchitecture for **X**ML **B**inding. JAXB is used in converting XML to Java Object and vice verse which means:
+JAXB stands for <kbd>Java Architecture for XML Binding</kbd>. JAXB is used in converting XML to Java Object and vice verse which means:
 
 * Marshalling : Convert Java Object → XML
 * UnMarshalling : Convert XML → Java Object
@@ -43,38 +44,38 @@ class Movie {
     String imdbUrl;
     String title;
     Details details;
-     
+
     public String getImdbID() {
         return imdbID;
     }
-     
+
     @XmlElement(name="imdbid")
     public void setImdbID(String imdbID) {
         this.imdbID = imdbID;
     }
-     
+
     public String getImdbUrl() {
         return imdbUrl;
     }
-     
+
     @XmlElement(name="imdburl")
     public void setImdbUrl(String imdbUrl) {
         this.imdbUrl = imdbUrl;
     }
-     
+
     public String getTitle() {
         return title;
     }
-     
+
     @XmlElement(name="title")
     public void setTitle(String title) {
         this.title = title;
     }
-     
+
     public Details getDetails() {
         return details;
     }
-     
+
     @XmlElement
     public void setDetails(Details details) {
         this.details = details;
@@ -86,29 +87,29 @@ class Details{
     String language;
     String genre;
     String year;
-     
+
     public String getLanguage() {
         return language;
     }
-     
+
     @XmlElement
     public void setLanguage(String language) {
         this.language = language;
     }
-     
+
     public String getGenre() {
         return genre;
     }
-     
+
     @XmlElement(name="genres")
     public void setGenre(String genre) {
         this.genre = genre;
     }
-     
+
     public String getYear() {
         return year;
     }
-     
+
     @XmlElement
     public void setYear(String year) {
         this.year = year;
@@ -132,24 +133,24 @@ public class Example {
         movie.setTitle("Unforgiven");
         movie.setImdbUrl("http://www.imdb.com/title/tt3358060/");
         movie.setImdbID("tt3358060");
-     
+
         Details details = new Details();
         details.setGenre("Action,Drama,History,War");
         details.setLanguage("English");
         details.setYear("1992");
         movie.setDetails(details);
-     
+
         try{
             JAXBContext jaxbContext = JAXBContext.newInstance(Movie.class);
             Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-     
+
             jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-     
+
             StringWriter xmlWriter = new StringWriter();
             jaxbMarshaller.marshal(movie, xmlWriter);
-     
+
             System.out.println(xmlWriter.getBuffer().toString());
-     
+
         }
         catch(JAXBException ex){
             ex.printStackTrace();
@@ -177,13 +178,13 @@ public class Example {
             File xmlWriter = new File("movie.xml");
             JAXBContext jaxbContext = JAXBContext.newInstance(Movie.class);
             Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-     
+
             System.out.println("===================================================");
             System.out.println("Converting XML to Object");
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
             Movie movieUnmarshall = (Movie) jaxbUnmarshaller.unmarshal(xmlWriter);
             System.out.println(movieUnmarshall);
-     
+
         }
         catch(JAXBException ex){
             ex.printStackTrace();

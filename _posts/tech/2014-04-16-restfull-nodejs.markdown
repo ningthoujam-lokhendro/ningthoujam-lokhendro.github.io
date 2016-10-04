@@ -3,7 +3,7 @@ layout: post
 title:  "Restful Webservice with NodeJs in 5 Min"
 date:   2014-04-16 22:22:05 +0530
 category:	"Everyday Tech"
-tags:	[web]
+tags:	['web'.'nodejs','rest']
 ---
 Its quite easy to create a restful web service for testing and during rapid development. Creating a quick prototype or having a contract that certain data format and type are going to expose help application developer and UI developer to work independently.
 
@@ -48,19 +48,19 @@ app.configure(function(){
 app.get('/movie/getMovie/:name', function(req, res) {
 	res.type('application/json');
 	var name = req.params.name;
-	console.log("Parameter: " + name);	
+	console.log("Parameter: " + name);
 
 	movie = new Object();
 	movie.name = name;
 	movie.genre = "Action";
 	movie.rating = "9/10";
-	movie.length = "120 min";	
+	movie.length = "120 min";
 
 	cast = new Object();
 	cast.Actor = "Gokul";
-	cast.Actress = "Surbala";	
+	cast.Actress = "Surbala";
 
-	movie.cast = cast;	
+	movie.cast = cast;
 
 	res.json(movie);
 });

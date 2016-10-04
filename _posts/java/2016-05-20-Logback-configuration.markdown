@@ -4,8 +4,9 @@ title:  "Logback Configuration"
 date:   2015-05-20 14:43:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
+tags: ['Logging','Logback']
 ---
-Logback is intended as a successor to the popular log4j project, [picking up where log4j leaves off][1]. 
+Logback is intended as a successor to the popular log4j project, [picking up where log4j leaves off][1].
 Configuring the logback to bootstrap in the project is describe here. For more information, see the [reference manual][2].
 
 ## <span class="glyphicon glyphicon-pushpin" ></span> Dependencies

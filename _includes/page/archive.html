@@ -8,22 +8,28 @@
 				</div>
 			</div>
 			<div class="row">
-				{% for posts in category %}
-			 	 {% for post in posts %}
-      		  	  {% if post.title != nil %}
-				<div class="col-md-4">
-
+				{% for posts in category offset:1 %}
+				<div class="col-md-12">
 					<div class="box-testimony to-animate">
 						<blockquote>
-							<span class="quote"><span><i class="icon-quote-left"></i></span></span>
-							<a href="{{post.url}}"><h3>{{ post.title }}</h3></a>
-							<p>{{ post.excerpt }}</p>
+			 	 			{% for post in posts %}
+      		  	  {% if post.title != nil %}
+								<div class="excerpt">
+									<a href="{{post.url}}">
+										<h3>
+											<i class="glyphicon glyphicon-chevron-right"></i>
+											{{ post.title }}
+										</h3>
+									</a>
+									<p> {{post.date | date: "%b %-d %Y"}}
+									<p>{{ post.excerpt }}</p>
+								</div>
+								{% endif %}
+      		  	{% endfor %}
 						</blockquote>
 					</div>
 				</div>
-				{% endif %}
-      		  {% endfor %}
-      		 {% endfor %}
+      {% endfor %}
 			</div>
 		</div>
 	</div>

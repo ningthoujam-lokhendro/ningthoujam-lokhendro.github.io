@@ -4,6 +4,7 @@ title:  "Manage your Passwords Securely"
 date:   2014-05-3 22:22:05 +0530
 category:	"Everyday Tech"
 author:	Ningthoujam Lokhendro
+tags: ['password','manage']
 ---
 Ever wonder how many sites has you signed up and forgot those credentials to log-in. USERNAME and PASSWORD management can become quite cumbersome. Where do you store those Information so that you can have a peace of mind. Each of us might use certain ways to store according to their needs. I used Excel sheet before to store all my credential and their details. But there are certain infeasible in using them.
 

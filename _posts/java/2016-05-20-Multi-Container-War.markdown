@@ -21,7 +21,10 @@ For more information, refer [google cloud platform web.xml][1] and [Metawerx web
 </div>
 
 Example `web.xml`: Here servlets are declared and the corresponding servlet mapping. The security is manage why the container.
-<script src="https://gist-it.appspot.com/github/ningthoujam-lokhendro/DeviceDetail/blob/master/redis-device-oui/src/main/webapp/WEB-INF/web.xml?footer=minimal"></script>
+<pre
+  class="language-xml"
+  data-jsonp="https://api.github.com/repos/ningthoujam-lokhendro/DeviceDetail/contents/redis-device-oui/src/main/webapp/WEB-INF/web.xml">
+</pre>
 
 ## Weblogic
 For the weblogic deployment, weblogic has its own weblogic specific deployment descriptor. This is used only when deployed in the weblogic container and named as 'weblogic.xml'. It resides at the same location as the `web.xml`.
@@ -31,7 +34,10 @@ If `weblogic.xml` deployment descriptor is absent, WebLogic Server automatically
 For more information, refer [weblogic deployment descriptor][3].
 
 Here is an example `weblogic.xml`: The `prefer-application-packages` here direct weblogic to load the classes that are in the war rather then the in-build/included in the weblogic library. The roles of the security is defined as well.
-<script src="https://gist-it.appspot.com/github/ningthoujam-lokhendro/DeviceDetail/blob/master/redis-device-oui/src/main/webapp/WEB-INF/weblogic.xml?footer=minimal"></script>
+<pre
+  class="language-xml"
+  data-jsonp="https://api.github.com/repos/ningthoujam-lokhendro/DeviceDetail/contents/redis-device-oui/src/main/webapp/WEB-INF/weblogic.xml">
+</pre>
 
 ## Jboss
 Jboss also has its own deployment descriptor that get used when deployed in jboss servlet container only and its named as `jboss-web.xml`, its also used to overrite setting in the `web.xml`. It resides at the same location as the `web.xml`.
@@ -40,13 +46,20 @@ For more information, refer [JBoss Web Application Deployment Descriptor.][4]
 Refer here for the [complete list of deployment descriptor of Jboss.][5]
 
 Example `jboss-web.xml` to declare the context root only and get all inherite the description from `web.xml`. The security roles are inherited from the `web.xml`.
-<script src="https://gist-it.appspot.com/github/ningthoujam-lokhendro/DeviceDetail/blob/master/redis-device-oui/src/main/webapp/WEB-INF/jboss-web.xml?footer=minimal"></script>
+<pre
+  class="language-xml"
+  data-jsonp="https://api.github.com/repos/ningthoujam-lokhendro/DeviceDetail/contents/redis-device-oui/src/main/webapp/WEB-INF/jboss-web.xml">
+</pre>
 
 ### jboss-deployment-structure.xml
 This file is used to control the class loading for the deployment. Here the logging classes are excluded as its already present in the war.
 
-<script src="https://gist-it.appspot.com/github/ningthoujam-lokhendro/DeviceDetail/blob/master/redis-device-oui/src/main/webapp/WEB-INF/jboss-deployment-structure.xml?footer=minimal"></script>
+<pre
+  class="language-xml"
+  data-jsonp="https://api.github.com/repos/ningthoujam-lokhendro/DeviceDetail/contents/redis-device-oui/src/main/webapp/WEB-INF/jboss-deployment-structure.xml">
+</pre>
 
+---
 <i class="glyphicon glyphicon-apple" /> For the full project reference visit [redis-device-oui][redis-device-oui]
 
 [redis-device-oui]: https://github.com/ningthoujam-lokhendro/DeviceDetail/blob/master/

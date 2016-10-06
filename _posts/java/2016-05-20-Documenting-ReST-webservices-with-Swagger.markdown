@@ -12,7 +12,7 @@ excerpt: Webservice documentaion is a good way to show the api that are exposed.
 ---
 Documenting ReST webservice is a must and it is also tedius task. With every minor change in the api, documentation becomes to difficult to track. With [Springfox-swagger][Springfox-swagger], it takes a the documentation to a breeze with <kbd>dynamic documentaion</kbd>. Here is a quick look on how to document rest api dynamically.
 
-## <span class="glyphicon glyphicon-pushpin" ></span> Dependencies
+## Dependencies
 The following maven dependencies are to be added.
 {% highlight xml %}
 <properties>
@@ -32,7 +32,7 @@ The following maven dependencies are to be added.
 </dependency>
 {% endhighlight %}
 
-## <span class="glyphicon glyphicon-pushpin"></span> Configuration Class
+## Configuration Class
 The following configuration class in spring configuration is used to configure the springfox. More for information, refer [springfox documentaion][springfox documentaion]
 <!--<script src="https://gist-it.appspot.com/github/ningthoujam-lokhendro/DeviceDetail/blob/master/redis-device-oui/src/main/java/com/ningzeta/deviceOUI/config/SwaggerConfiguration.java?footer=0&slice=22:0"></script>
 -->
@@ -41,7 +41,7 @@ The following configuration class in spring configuration is used to configure t
   data-jsonp="https://api.github.com/repos/ningthoujam-lokhendro/DeviceDetail/contents/redis-device-oui/src/main/java/com/ningzeta/deviceOUI/config/SwaggerConfiguration.java">
 </pre>
 
-## <span class="glyphicon glyphicon-pushpin"></span> Add Resource Handler
+## Add Resource Handler
 Spring class to handle resource via configuration to expose the resources of the webjar.
 <pre
   class="language-java"

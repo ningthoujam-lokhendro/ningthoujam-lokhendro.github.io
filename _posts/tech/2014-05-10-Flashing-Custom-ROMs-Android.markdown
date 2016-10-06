@@ -52,7 +52,7 @@ Download the firmware of your choice. You can compare from the list here: [Wikip
 * After completing it will reboot and you will be booted to the new install ROM.
 
 ## Install Google App – GAPP
-After booting into the new shinny android there won`t be any Google apps which include Google Play store to download apps. `Google apps or GAPP` is not included in the firmware because they are not open source and are not license to distribute along with the custom firmwares.
+After booting into the new shinny android there won't be any Google apps which include Google Play store to download apps. `Google apps or GAPP` is not included in the firmware because they are not open source and are not license to distribute along with the custom firmwares.
 
 If you are using `CynogenMod`, you can [download from here][download from here]. Choose the one that suits your cynogenmod version. They are all signed bits. If you are using other firmware, the firmware page will list where to find them.
 

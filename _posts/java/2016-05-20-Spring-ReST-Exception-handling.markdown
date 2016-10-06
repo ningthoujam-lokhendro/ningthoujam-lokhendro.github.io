@@ -17,16 +17,16 @@ Handling excpetion in Spring web application and returing them to the client mea
 
 First lets see how the error controller in springboot can be customize.
 
-## <span class="glyphicon glyphicon-pushpin" ></span> Error Controller
+## Error Controller
 Whenever an error happen, spring directs to <kbd>/error</kbd>. The default configuration is vanila. To spice thing a bit, <kbd>implements</kbd> the `org.springframework.boot.autoconfigure.web.ErrorController`. Now instead of returing valina error message, more detail message is recieved by the client.
 
 <code data-gist-id="ningthoujam-lokhendro/5e700af14326ff08ee9bb30c6640f344" data-gist-line="23-58"></code>
 <!--<script src="https://gist.github.com/ningthoujam-lokhendro/5e700af14326ff08ee9bb30c6640f344.js"></script>-->
 
-## <span class="glyphicon glyphicon-pushpin" ></span> Spring ControllerAdvice
+## Spring ControllerAdvice
 Spring ControllerAdvice takes a level more and makes the error handling more easy. From the application exception are throws up at any particular point. ControllerAdvice is the single point of entry to handle all exception and let you define how to hanndle for each or group of exception.
 
-### <span class="glyphicon glyphicon-hand-right"></span> Define an exception class extending the <kbd>RuntimeException</kbd>
+### Define an exception class extending the <kbd>RuntimeException</kbd>
 {% highlight java %}
 public class InvalidOUIException extends RuntimeException {
 
@@ -45,7 +45,7 @@ public class InvalidOUIException extends RuntimeException {
 }
 {% endhighlight %}
 
-### <span class="glyphicon glyphicon-hand-right"></span> Create an ErrorMessage Object.
+### Create an ErrorMessage Object.
 {% highlight java %}
 public class ErrorMessage {
 	String timestamp;
@@ -68,10 +68,10 @@ public class ErrorMessage {
 }
 {% endhighlight %}
 
-### <span class="glyphicon glyphicon-hand-right"></span> Handle all the exception via ControllerAdvice.
+### Handle all the exception via ControllerAdvice.
 <script src="https://gist-it.appspot.com/github/ningthoujam-lokhendro/DeviceDetail/blob/master/redis-device-oui/src/main/java/com/ningzeta/deviceOUI/controller/ExceptionProcessor.java?footer=minimal&slice=20:0"></script>
 
-### <span class="glyphicon glyphicon-hand-right"></span> Throw the exception from where relevant and ControllerAdvice will handle it.
+### Throw the exception from where relevant and ControllerAdvice will handle it.
 
 {% highlight java %}
 

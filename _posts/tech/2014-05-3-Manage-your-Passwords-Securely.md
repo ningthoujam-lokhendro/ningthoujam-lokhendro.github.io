@@ -28,7 +28,7 @@ Excel style data entry. You can store extra details more then the credential.
 You need to pay if you want to store more than 100. But usual web-user would not reach that much.
 
 ### 4. Sharing
-Collaboration becomes easy with your friends, family and colleague. If you want to share you password, you don`t need to send as clear-text in IM or email but using the sharing feature it has within.
+Collaboration becomes easy with your friends, family and colleague. If you want to share you password, you don't need to send as clear-text in IM or email but using the sharing feature it has within.
 
 If you are sharing certain account with your colleague or friend or project mate, sharing becomes easy. Even if you update it, they would see the most recent one. If you have to share with IM/Email, you have to sent over again.
 

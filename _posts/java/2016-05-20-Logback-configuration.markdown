@@ -9,7 +9,7 @@ tags: ['Logging','Logback']
 Logback is intended as a successor to the popular log4j project, [picking up where log4j leaves off][1].
 Configuring the logback to bootstrap in the project is describe here. For more information, see the [reference manual][2].
 
-## <span class="glyphicon glyphicon-pushpin" ></span> Dependencies
+## Dependencies
 {% highlight xml %}
 <!-- Logging -->
 <dependency>
@@ -25,12 +25,12 @@ Configuring the logback to bootstrap in the project is describe here. For more i
 </dependency>
 {% endhighlight %}
 
-## <span class="glyphicon glyphicon-pushpin" ></span> Configuring logback
+## Configuring logback
 Create a xml file with named <kbd>logback.xml</kbd> under <kbd>resource</kbd> directory of the web application.
 
 <script src="https://gist-it.appspot.com/github/ningthoujam-lokhendro/DeviceDetail/blob/master/redis-device-oui/src/main/resources/logback.xml?footer=minimal"></script>
 
-## <span class="glyphicon glyphicon-pushpin" ></span> Logging
+## Logging
 Now to log out,
 {% highlight java %}
 import org.slf4j.Logger;

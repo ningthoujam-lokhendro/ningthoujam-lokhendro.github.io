@@ -14,7 +14,7 @@ The answer is anyone with basic working knowledge of computer, smartphone can �
 Rooting means taking control of your device. When the manufacturer sell you the device, the operation of device is run in an environment and limit define by the manufacturer. The full potential of device is not explore. When you root the device, you are the super user, you now actually own a property that you can do whatever limit you want the hardware can take. You are not bound by rules define by anyone.
 
 ## What is so Good about it?
-When you bought a android device, the manufacture install lots of software. These software are really good if you are average user and don`t mind to stay in the dictation of the manufacturer. But also contains bloatware which makes the device slower; can install apps that only does not exploit the true potentials of you device; battery consumption more….
+When you bought a android device, the manufacture install lots of software. These software are really good if you are average user and don't mind to stay in the dictation of the manufacturer. But also contains bloatware which makes the device slower; can install apps that only does not exploit the true potentials of you device; battery consumption more….
 
 In Summary the benefits would be improve battery life, root apps, trying custom ROMs, overclocking, no bloatware, increase in performance and trying out or updating new android version even though the manufacturer does not have not release the updates. If you are shy from these, rooting is not for you.
 
@@ -77,7 +77,7 @@ Before proceding, make your phone is USB debuging mode. Setting -> Developer -> 
 * Plug your GT-I9300 into the computer, wait for the drivers to install and then wait for the ID:COM section to turn blue.
 * Check only ‘Auto Reboot’ and ‘F. Reset Time’ in the options.
 * Click on the PDA button: Browse and select the Root zip file your have download.
-* Click Start and it will do the reboot when completed. Don`t shutdown or Disconnect the cable untill ‘Pass’ Appears in the Odin.
+* Click Start and it will do the reboot when completed. Don't shutdown or Disconnect the cable untill ‘Pass’ Appears in the Odin.
 
 Download `SuperSU` from play store and check if your device is rooted.
 

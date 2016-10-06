@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    color: #159957;  }
+    color: #22C3AA;  }
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -49,7 +49,7 @@ kbd {
   margin-top: 90px;
 }
 .sidebar h2 {
-    background-color: #3C763D;
+    background-color: #22C3AA;
     color: white;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     border-radius: 6px;
@@ -63,10 +63,8 @@ kbd {
 .sidebar h2 i {
     width: auto;
     height: auto;
-
     font-size:16px;
     line-height: 16px;
-
     margin-right:4px;
 }
 
@@ -78,8 +76,19 @@ kbd {
   margin-top:initial;
 }
 .well-border {
-  border: 2px solid #3C763D;
+  border: 2px solid #22C3AA;
 }
 .excerpt {
-  border-top: 1px dashed #D0648A;
+  border-top: 3px dashed #ff6600;
+}
+.post-header {
+  font-family: sans-serif;
+  /* font-weight: 900; */
+  margin: 0.5em 0px 1em 0px;
+  text-shadow: 1px 1px #EFEFEF,3px 3px #AEE2D9;
+  border-bottom-style: double;
+  border-bottom-color: #22C3AA;
+  border-bottom-width: 8px;
+  padding-bottom: .2em;
+  color: #666;
 }

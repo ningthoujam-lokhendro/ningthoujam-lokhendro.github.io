@@ -19,3 +19,4 @@ WGET is small and awesome application that comes with all distros as it is under
 # To avoid downloading the index.html files, use this command:
  wget -r --no-parent --reject "index.html*" http://mysite.com/xyz/
 {% endhighlight %}
+Reference-style:

@@ -5,11 +5,13 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="keywords" content="ningthoujam,lokhendro" />
+  <meta name="keywords" content={% if page.tags %}{{page.tags | array_to_sentence_string}}{% else %}"Ningthoujam,Lokhendro"{% endif %} />
   <meta name="author" content="Ningthoujam Lokhendro" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html',''  | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="shortcut icon" type="image/png" href="{{ "/NG_Favicon.png" | prepend: site.baseurl }}" >
+  <link rel="shortcut icon" type="image/png" href="{{ "/NG_Favicon.png" | | prepend: site.baseurl | prepend: site.url }}" >
 
   <!-- Facebook and Twitter integration -->
   <meta property="og:title" content=""/>

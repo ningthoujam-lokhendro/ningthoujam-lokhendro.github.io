@@ -59,7 +59,6 @@ This file is used to control the class loading for the deployment. Here the logg
   data-jsonp="https://api.github.com/repos/ningthoujam-lokhendro/DeviceDetail/contents/redis-device-oui/src/main/webapp/WEB-INF/jboss-deployment-structure.xml">
 </pre>
 
----
 <i class="glyphicon glyphicon-apple" /> For the full project reference visit [redis-device-oui][redis-device-oui]
 
 [redis-device-oui]: https://github.com/ningthoujam-lokhendro/DeviceDetail/blob/master/

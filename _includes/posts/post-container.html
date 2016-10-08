@@ -1,7 +1,8 @@
 <div class="container">
+  <div class="row top-row">
+  </div>
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-8">
-      
+    <div class="col-xs-12 col-sm-10 col-md-10 col-md-offset-1">
       <div class="fh5co-blog">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -12,20 +13,25 @@
 
           <div class="post-content" itemprop="articleBody">
             {{ content }}
+            <div>
+              <hr>
+            </div
           </div>
-
-          {% include posts/comments.html %}
-
         </article>
       </div>
-
     </div>
-    <div class="col-xs-6 col-md-4 sidebar">
-      <ul class="listless margin-top-reset">
-        {% include posts/sidebar.html %}
-      </ul>
-      
-    </div>
-    
   </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-10 col-md-offset-1">
+      <div class="row">
+        {% include posts/sidebar.html %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-10 col-md-offset-1">
+      {% include posts/comments.html %}
+    </div>
+  </div>
+
 </div>

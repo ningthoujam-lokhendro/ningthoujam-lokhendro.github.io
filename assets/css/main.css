@@ -6,6 +6,7 @@ body {
     line-height: 1.5;
     color: #000000; ##606c71;
     background: url(/assets/images/cream-paper.png) center top repeat;
+    margin-bottom: 60px;
 }
 h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
@@ -19,22 +20,14 @@ html {
   position: relative;
   min-height: 100%;
 }
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
+
 .footer {
-  position: absolute;
+  position: relative;;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-}
-/*set position and height for blog*/
-.fh5co-blog {
-  top: 85px;
-  position: relative;
-  padding-bottom: 65px;
+  /*height: 60px;*/
+  top: 25px;
 }
 .img-left {
     float: left;
@@ -45,10 +38,8 @@ body {
 kbd {
   background-color: #00e24b;
 }
-.sidebar {
-  margin-top: 90px;
-}
-.sidebar h2 {
+
+.downbar h2 {
     background-color: #22C3AA;
     color: white;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -60,7 +51,7 @@ kbd {
     /*font-size:16px;*/
 }
 
-.sidebar h2 i {
+.downbar h2 i {
     width: auto;
     height: auto;
     font-size:16px;
@@ -68,7 +59,7 @@ kbd {
     margin-right:4px;
 }
 
-.sidebar h3 {
+.downbar h3 {
     font-size:14px;
 }
 
@@ -91,4 +82,15 @@ kbd {
   border-bottom-width: 8px;
   padding-bottom: .2em;
   color: #666;
+}
+hr {
+    background-color: #22C3AA;
+    height: 3px;
+    border: 0;
+    margin: 10px 0;
+}
+.top-row {
+  top: 85px;
+    position: relative;
+    padding-bottom: 65px;
 }

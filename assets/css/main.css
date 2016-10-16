@@ -203,3 +203,20 @@ hr {
   height: 0;
   box-shadow: 0 0 10px 1px black;
 }
+
+.tags .img-rounded {
+  background: black;
+  color: whitesmoke;
+  font-family: cursive;
+}
+
+.img-rounded a {
+  color: whitesmoke;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.img-rounded a:hover, a:active, a:focus {
+  color: #ff6600;
+  #outline: none;
+}

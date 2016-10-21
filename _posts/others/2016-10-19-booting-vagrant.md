@@ -23,10 +23,10 @@ Vagrant shipped with support for VirtualBox,Hyper-V and Docker.
 
 ## Configuration of vagrant file
 Vagrant should be available in your path.
-Now create a vagrant file:
-```bash
+Now create a vagrant file
+{% highlight bash %}
 vagrant init hashicorp/precise64
-```
+{% endhighlight %}
 This will use the default ubuntu box. If you want to use other box search at the [hashicorp][hashicorp]
 
 With the above cmd a vagrant file should be generated with named <kbd>Vagrantfile</kbd>
@@ -35,19 +35,21 @@ This file is core of the configuration of the vagrant where the virtual machine 
 Basic Networking of the machine configuration at the Vagrant file are:
 
 ### Forwading Port
-```cmd
+{% highlight cmd %}
 config.vm.network "forwarded_port", guest: 80, host: 8080
-```
+{% endhighlight %}
+
 if you want more port to be forwarded include these and optional protocal can also be define
-```cmd
+{% highlight cmd %}
 config.vm.network "forwarded_port", guest: 1337, host: 11337, protocal: "tcp"
-```
+{% endhighlight %}
 
 ### Setup your Private Network
 This allow host only access to the machine.
-```cmd
+{% highlight cmd %}
 config.vm.network "private_network", ip: "192.168.33.10"
-```
+{% endhighlight %}
+
 For more detail configuration on network refer at [Vagrant Network configuration][Vagrant Network configuration]
 
 ## Provisioning
@@ -66,97 +68,104 @@ config.vm.provision "shell", inline: <<-SHELL
 
 ### External shell script
 To use shell provision witht a external shell script:
-```cmd
+{% highlight cmd %}
 config.vm.provision "shell", path: "script.sh"
-```
+{% endhighlight %}
 
 ### Remote shell script
 For Remote file:
-```cmd
+{% highlight cmd %}
 config.vm.provision "shell", path: "https://example.com/provisioner.sh"
-```
+{% endhighlight %}
 
 ### Upload File
 To upload a file to the guest machine from the host:
-```cmd
+{% highlight cmd %}
 config.vm.provision "file", source: "~/httpd.conf", destination: "httpd.conf"
-```
+{% endhighlight %}
 
 ### Puppet
 Can perform in two types : Puppet Apply and Puppet Agent
 #### Puppet Apply
 Define the manifest and apply the provisioning.
 This will instruct vagrant that provisioning is going to be puppet.
-```cmd
+{% highlight cmd %}
 Vagrant.configure("2") do |config|
   config.vm.provision "puppet"
 end
-```
+{% endhighlight %}
+
 And by default will look at the 'manifest' directory at the current directory and use the default.pp as the entry point.
-```bash
+{% highlight bash %}
 $ tree
 .
 |-- Vagrantfile
 |-- manifests
 |   |-- default.pp
-```
+{% endhighlight %}
 
 #### Puppet Agent
 This is defined as the puppet agent and you need to set the location of the puppet master.
-```cmd
+{% highlight cmd %}
 Vagrant.configure("2") do |config|
   config.vm.provision "puppet_server" do |puppet|
     puppet.puppet_server = "puppet.example.com"
   end
 end
-```
+{% endhighlight %}
 And defined the node as:
-```cmd
+{% highlight cmd %}
 Vagrant.configure("2") do |config|
   config.vm.provision "puppet_server" do |puppet|
     puppet.puppet_node = "node.example.com"
   end
 end
-```
+{% endhighlight %}
 [More provision][More provision].
 
 ## Basic commands
 The following are some of the basic commands of vagrant that will be used regularly.
 ### Initilization
-```bash
+{% highlight bash %}
 vagrant init
-```
+{% endhighlight %}
+
 ### Bootup
-```bash
+{% highlight bash %}
 vagrant up
-```
+{% endhighlight %}
+
 ### SSH
 This is ssh to the box with the default user/password <kbd>vagrant/vagrant</kbd> at default port `2222`.
 Default root password `vagrant`.
-```bash
+{% highlight bash %}
 vagrant ssh
-```
+{% endhighlight %}
+
 ### Suspending
 This will save the current running state of the machine and stop it. When you are ready to begin working again, just run `vagrant up`, and it will be resumed from where you left off.
-```bash
+{% highlight bash %}
 vagrant suspend
-```
+{% endhighlight %}
+
 ### Halting
 This will gracefully shut down the guest operating system and power down the guest machine. You can use `vagrant up` when you are ready to boot it again.
-```bash
+{% highlight bash %}
 vagrant halt
-```
+{% endhighlight %}
+
 ### Destroy
 This will remove all traces of the guest machine from your system. It'll stop the guest machine, power it down, and remove all of the guest hard disks. Again, when you are ready to work again, just issue a `vagrant up`
-```bash
+{% highlight bash %}
 vagrant destroy
-```
+{% endhighlight %}
+
 ### Provisioning
 On the first run of `vagrant up`, if provision is defined it will run. If you want to rerun again then use the flag `--provision`.
 
-```bash
+{% highlight bash %}
 vagrant reload --provision
-```
+{% endhighlight %}
 More on the [vagrant cli][vagrant cli]
 
 

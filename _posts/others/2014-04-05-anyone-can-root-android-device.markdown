@@ -2,7 +2,7 @@
 layout: post
 title:  "Anyone can Root Android device"
 date:   2014-04-05 22:22:05 +0530
-category:	"Everyday Tech"
+category:	"Others"
 author:	Ningthoujam Lokhendro
 tags: ['android','rooting']
 excerpt:  Rooting means taking control of your device. When the manufacturer sell you the device, the operation of device is run in an environment and limit define by the manufacturer. The full potential of device is not explore. When you root the device, you are the super user, you now actually own a property that you can do whatever limit you want the hardware can take.

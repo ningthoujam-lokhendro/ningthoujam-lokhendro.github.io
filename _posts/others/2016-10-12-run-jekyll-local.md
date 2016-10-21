@@ -1,9 +1,11 @@
 ---
 layout: post
 title: Run Jekyll local
-category:	"Github"
+category:	"Others"
 tags:
 - Jekyll
+excerpt:
+  Blog with static site with Jekyll.
 ---
 In order to run the github-pages that runs on jekyll on your local machine, follow the following steps:
 

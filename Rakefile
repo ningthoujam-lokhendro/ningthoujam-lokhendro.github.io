@@ -62,6 +62,7 @@ task :post do
     post.puts "tags:"
     post.puts "-  tag1"
     post.puts "-  tag2"
+    post.puts "excerpt:"
     post.puts "---"
     post.puts "* TOC:"
     post.puts "{:toc}"

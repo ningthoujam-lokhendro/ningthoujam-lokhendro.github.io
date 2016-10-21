@@ -2,9 +2,10 @@
 layout: post
 title:  "Flashing Custom ROMs Android"
 date:   2014-05-10 22:22:05 +0530
-category:	"Everyday Tech"
+category:	"Others"
 author:	Ningthoujam Lokhendro
 tags: ['android','custom rom','ClockworkMod','rooting']
+excerpt: Ever bored of using the same feature and user interface of your phone. Is your phone performing slow and battery is draining?  If you own an android device you can taste different flavor of the those by flashing the ROM.
 ---
 Ever bored of using the same feature and user interface of your phone. Is your phone performing slow and battery is draining?  If you own an android device you can taste different flavor of the those by flashing the ROM. There are many ROMs floating in the net. You can choose the best that suite you and flash them. If you are new in this area heads to my previous article of [Anyone can Root Android device][Anyone can Root Android device], where most of the terminology and benefits are defined.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Manage your Passwords Securely"
 date:   2014-05-3 22:22:05 +0530
-category:	"Everyday Tech"
+category:	"Others"
 author:	Ningthoujam Lokhendro
 tags: ['password','manage']
 ---

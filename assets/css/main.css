@@ -1,3 +1,10 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -16,13 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    color: #22C3AA;  }
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+    color: #22C3AA;
 }
 
 .footer {
@@ -218,5 +219,5 @@ hr {
 }
 .img-rounded a:hover, a:active, a:focus {
   color: #ff6600;
-  #outline: none;
+  outline: none;
 }

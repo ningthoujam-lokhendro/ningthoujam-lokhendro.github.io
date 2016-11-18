@@ -1,9 +1,9 @@
 <div class="tags">
   <ul class="list-inline">
   {% for tag in page.tags%}
-  		<li class="img-rounded">
-  			<a href="#"><i class="icon-tag"></i> {{ tag }}</a>
-  		</li>
+    <li class="tagcloud">
+      <a href="#" hidefocus="true" style="outline: none;"><span>{{ tag }}</span></a>
+    </li>
   {% endfor %}
   </ul>
 </div>

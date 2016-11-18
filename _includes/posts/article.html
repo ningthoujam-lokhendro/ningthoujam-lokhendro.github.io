@@ -1,0 +1,64 @@
+<div class="container-fluid boxed clearfix">
+  <div class="row">
+    <div class="col-xl-8 col-lg-12">
+      <section class="section">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 fadIn" style="visibility: visible; animation-name: fadeIn;">
+              <div class="jumbotron fadeIn" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                <header>
+                  <h2 class="post-title" itemprop="name headline">{{ page.title }}</h2>
+                  <p class="post-meta">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <time datetime="{{ page.date | date_to_xmlschema }}"
+                          itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}
+                    </time>
+                    {% if site.author %}&emsp;&emsp;
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                      <span itemprop="name">{{ site.author }}</span>
+                    </span>
+                    {% endif %}
+                  </p>
+                  {% include posts/tags.html %}
+                </header>
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 fadIn" style="visibility: visible; animation-name: fadeIn;">
+              <div class="post-content" itemprop="articleBody">
+                {{ content }}
+                <hr/>
+                {% include social-share.html %}
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10 col-md-offset-1">
+              <div class="row">
+                {% include posts/sidebar.html %}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="hr-post-end">
+              <hr>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-8 col-md-offset-2">
+              {% include posts/comments.html %}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="float-share">
+  {% include social-share.html %}
+</div>

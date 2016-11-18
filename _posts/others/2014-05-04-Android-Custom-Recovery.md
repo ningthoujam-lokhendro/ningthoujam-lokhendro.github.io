@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Android Custom Recovery"
-date:   2014-05-10 22:22:05 +0530
+date:   2014-05-04 22:22:05 +0530
 category:	"Others"
 author:	Ningthoujam Lokhendro
 tags: ['android','custom rom','ClockworkMod','rooting']

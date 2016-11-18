@@ -56,6 +56,6 @@ GooManager can also be found in the `Google Play Store`. It allows for downloads
 
 Once you have Install Recovery of your choice, its time to try out different flavor of Custom ROM.
 
-[Anyone can Root Android device]: {% post_url 2014-04-05-anyone-can-root-android-device %}
+[Anyone can Root Android device]: http://ningzeta.com/others/2014/04/05/anyone-can-root-android-device.html
 [ClockworkMod_Recovery]: http://forum.xda-developers.com/wiki/ClockworkMod_Recovery
 [TeamWin Recovery Project]: http://teamw.in/project/twrp2

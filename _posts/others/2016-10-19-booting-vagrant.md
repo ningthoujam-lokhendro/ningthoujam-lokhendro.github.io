@@ -52,6 +52,11 @@ config.vm.network "private_network", ip: "192.168.33.10"
 
 For more detail configuration on network refer at [Vagrant Network configuration][Vagrant Network configuration]
 
+## Add Plugin
+Install the virtual-box guest addition plugin for syncing the host directory.
+{% highlight bash %}
+  vagrant plugin install vagrant-vbguest
+{% endhighlight %}
 ## Provisioning
 Provisioning is setting up the machine to pre-install software packages and configure automatically.
 Different Provisioning are supported such as Shell,Puppet, Chef, Ansible, Salt, and Docker. Shell is default one.

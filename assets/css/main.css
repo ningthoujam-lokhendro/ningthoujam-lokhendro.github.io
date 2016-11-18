@@ -23,7 +23,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    color: #22C3AA;
+    color: #ff5722;
+}
+
+.btn.btn-left {
+    background-position: right -185px;
 }
 
 .footer {
@@ -34,7 +38,9 @@ h1, h2, h3, h4, h5, h6 {
   /*height: 60px;*/
   top: 25px;
 }
-
+a {
+      color: #26C6DA;
+}
 .img-left {
     float: left;
     margin: 0px 20px 0 0;
@@ -206,9 +212,9 @@ hr {
 }
 
 .tags .img-rounded {
-  background: black;
-  color: whitesmoke;
-  font-family: cursive;
+  background: #F44336;
+  color: white;
+  font-family: inherit;
 }
 
 .img-rounded a {

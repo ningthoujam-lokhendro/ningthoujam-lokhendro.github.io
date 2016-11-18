@@ -12,7 +12,7 @@ In order to run the github-pages that runs on jekyll on your local machine, foll
 * TOC:
 {:toc}
 
-##  Download and install ruby.
+## Ruby Install in Windows
 1.  First download and install ruby for your platform, say at <kbd>C:\Ruby23</kbd>
 [For windows get from here.] [1]
 
@@ -29,6 +29,25 @@ ruby dk.rb init
 ruby dk.rb install
 {% endhighlight %}
 
+## Ruby Install in CentOS
+### Install Dependant Library
+{% highlight bash%}
+yum -y install gcc-c++ patch readline readline-devel zlib zlib-devel
+yum -y install libyaml-devel libffi-devel openssl-devel make
+yum -y install bzip2 autoconf automake libtool bison iconv-devel sqlite-devel
+{% endhighlight %}
+
+### Install RVM
+{% highlight bash%}
+curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+curl -L get.rvm.io | bash -s stable
+
+source /etc/profile.d/rvm.sh
+rvm reload
+
+rvm install 2.2.4
+{% endhighlight %}
+
 ##  Install Jekyll gem.
 Now install basic gem to get started. Use the following syntax to install gem.
 
@@ -42,7 +61,9 @@ gem install <gem-name> -v <version>
 
 Using the following gem:
 1.  bundle
+
 2.  rake
+
 3.  jekyll
 
 <div class="well note">

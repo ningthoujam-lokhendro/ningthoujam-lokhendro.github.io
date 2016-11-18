@@ -60,7 +60,7 @@ If you are using `CynogenMod`, you can [download from here][download from here].
 That`s it. Enjoy the new firmware.
 
 
-[Anyone can Root Android device]: {% post_url 2014-04-05-anyone-can-root-android-device %}
-[Android Custom Recovery]: {% post_url 2014-05-04-Android-Custom-Recovery %}
+[Anyone can Root Android device]: http://ningzeta.com/others/2014/04/05/anyone-can-root-android-device.html
+[Android Custom Recovery]: http://ningzeta.com/others/2014/05/04/Android-Custom-Recovery.html
 [Wikipedia]: http://en.wikipedia.org/wiki/List_of_custom_Android_firmwares
 [download from here]: http://wiki.cyanogenmod.org/w/Google_Apps

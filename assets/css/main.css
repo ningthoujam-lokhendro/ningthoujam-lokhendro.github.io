@@ -311,3 +311,9 @@ header h2 {
   color: #ff6600;
   outline: none;
 }
+
+@media screen and (max-width: 1024px) {
+    .mytoc {
+        display: none !important;
+    }
+}

@@ -1,0 +1,32 @@
+<!--<div class="col-xs-6 col-sm-10 col-md-6">
+  <div class="well well-lg well-border downbar">
+      <h2><i class="icon-star-empty"></i> Related posts</h2>
+      {% include posts/related-summary.html %}
+  </div>
+</div>
+<div class="col-xs-6 col-sm-10 col-md-6">
+  <div class="well well-lg well-border downbar">
+      <h2><i class="icon-star-empty"></i> Recent posts</h2>
+      {% include posts/recent-summary.html %}
+      <a href="{{baseurl}}/blogs.html" class="btn">All posts <i class="icon-arrow-right"></i></a>
+  </div>
+</div>
+-->
+<div class="col-xs-6 col-sm-10 col-md-6">
+  <div class="jumbotron related fadeIn" style="padding-left: 20px;">
+      <h2 style="text-align:center;">- Related posts -</h2>
+      {% include posts/related-summary.html %}
+  </div>
+</div>
+<div class="col-xs-6 col-sm-10 col-md-6">
+  <div class="jumbotron related fadeIn" style="padding-left: 20px;">
+      <h2 style="text-align:center;">- Recent posts -</h2>
+      {% include posts/recent-summary.html %}
+      <div class="col-md-4 pull-right text-center">
+        <a href="{{baseurl}}/blogs.html" class="btn btn-success">
+          All posts
+          <i class="icon-arrow-right"></i>
+        </a>
+      </div>
+  </div>
+</div>

@@ -6,6 +6,9 @@ category:	"Others"
 author:	Ningthoujam Lokhendro
 tags: ['android','custom rom','ClockworkMod','rooting']
 ---
+* TOC:
+{:toc}
+
 In Android, recovery is a software that is distinct and separate from the ROM installed operation system. It has its own partition and is booted when certain keys are press togerther. Installed operation system is one you interact with the device to make call, install apps, take pic etc. Recovery on the other hand is used in the system update, diagnostic and perform factory reset of the android system. They comes handy when installing new ROM, updating ROM and even fixing when the installed ROM fails to boot the device.
 
 `Stock Recovery` is the recovery system that comes along with the device. They have limited feature and usage is limited. It can delete user date, reset to factory setting and perform system update.

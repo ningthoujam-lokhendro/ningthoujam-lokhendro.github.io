@@ -10,6 +10,9 @@ tags:
 - spring
 excerpt: Webservice documentaion is a good way to show the api that are exposed. Using swagger annotation and let swagger generate the documentation is pretty neat.
 ---
+* TOC:
+{:toc}
+
 Documenting ReST webservice is a must and it is also tedius task. With every minor change in the api, documentation becomes to difficult to track. With [Springfox-swagger][Springfox-swagger], it takes a the documentation to a breeze with <kbd>dynamic documentaion</kbd>. Here is a quick look on how to document rest api dynamically.
 
 ## Dependencies

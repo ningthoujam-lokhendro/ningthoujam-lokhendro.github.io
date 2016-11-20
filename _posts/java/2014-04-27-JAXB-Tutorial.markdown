@@ -6,6 +6,9 @@ category:	"Java"
 author:	Ningthoujam Lokhendro
 tags: ['jaxb']
 ---
+* TOC:
+{:toc}
+
 JAXB stands for <kbd>Java Architecture for XML Binding</kbd>. JAXB is used in converting XML to Java Object and vice verse which means:
 
 * Marshalling : Convert Java Object → XML

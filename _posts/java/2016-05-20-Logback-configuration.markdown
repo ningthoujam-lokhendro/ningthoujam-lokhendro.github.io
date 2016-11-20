@@ -6,6 +6,9 @@ category:	"Java"
 author:	Ningthoujam Lokhendro
 tags: ['Logging','Logback']
 ---
+* TOC:
+{:toc}
+
 Logback is intended as a successor to the popular log4j project, [picking up where log4j leaves off][1].
 Configuring the logback to bootstrap in the project is describe here. For more information, see the [reference manual][2].
 

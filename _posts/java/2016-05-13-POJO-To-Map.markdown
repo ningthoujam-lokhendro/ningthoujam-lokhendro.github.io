@@ -6,6 +6,9 @@ category:	"Java"
 author:	Ningthoujam Lokhendro
 tags: ['pojo','convert','jackson','Introspector']
 ---
+* TOC:
+{:toc}
+
 There is sometimes needs to convert POJO to Map and vice-versa. This article talks about the different ways of conversion with common available library to do so.
 
 Example POJO:

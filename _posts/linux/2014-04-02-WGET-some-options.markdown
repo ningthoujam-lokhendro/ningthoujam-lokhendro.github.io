@@ -6,6 +6,9 @@ category:	"Linux"
 tags:   ['wget','download']
 author:	Ningthoujam Lokhendro
 ---
+* TOC:
+{:toc}
+
 WGET is small and awesome application that comes with all distros as it is under GNU. Anyone who want to get contents from the web server is aware of this. It supports downloading via HTTP, HTTPS and FTP protocol. There are already enough material available about WGET but this article is to get all files in a directory by wget.
 
 {% highlight bash %}

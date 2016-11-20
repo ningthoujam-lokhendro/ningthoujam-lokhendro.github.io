@@ -6,6 +6,9 @@ category:	"Java"
 author:	Ningthoujam Lokhendro
 tags: ['jdbc','database']
 ---
+* TOC:
+{:toc}
+
 JDBC driver is a software component enabling the java application to interact with the database. JDBC drivers are analogous to ODBC drivers, ADO.NET data providers, and OLE DB providers.
 
 But we are not going to discuss in details on those. It is a standard Java API for database-independent connectivity with wide range of databases to perform CRUD operations.

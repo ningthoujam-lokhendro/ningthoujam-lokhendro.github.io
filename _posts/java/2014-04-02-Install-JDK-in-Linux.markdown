@@ -6,6 +6,9 @@ category:	"Java"
 author:	Ningthoujam Lokhendro
 tag:  ['installation']
 ---
+* TOC:
+{:toc}
+
 Default java that comes with most distros are openjdk. Oracle JDK is indeed needed for development or deployment, so here is a brief steps to install JDK <version> at your newly installed distros.
 
 ## Step 1 : Download the binary.

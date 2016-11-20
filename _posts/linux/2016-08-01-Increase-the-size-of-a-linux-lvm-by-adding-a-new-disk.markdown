@@ -6,9 +6,6 @@ category:	"Linux"
 tags: ['linux','fdisk']
 author:	Ningthoujam Lokhendro
 ---
-* TOC:
-{:toc}
-
 The <kbd>Linux Logical Volume Manager(lvm)</kbd> can be increase when adding a new disk. This is usually usefull when working in virtual machine to add new disk space.
 
 * TOC

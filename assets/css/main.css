@@ -317,6 +317,22 @@ header h2 {
 	background: rgba(255,0,0,0.4);
 }
 
+/*-----------------------------------*/
+/* Dividers */
+/*-----------------------------------*/
+
+.dividers{margin-bottom:40px;}
+
+.divider{
+	border-top:1px solid #d6d6d6;
+	border-bottom:1px solid #fff;
+	margin:15px 0;
+}
+.divider.dashed{
+	border-top:1px dashed #b1b1b1;
+	border-bottom:1px dashed #fff;
+}
+.divider.margin-30{margin: 35px 0 30px;}
+
 @media screen and (min-width: 0px) and (max-width: 400px) {
   #toc { display: none; }  /* hide it on small screens */
-}

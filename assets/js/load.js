@@ -6,6 +6,7 @@ $(document).ready(function(){
     $('.post-content h3').prepend('<span class="glyphicon glyphicon-hand-right"></span> ');
     $('#toc').BootSideMenu({
         side: "left",
-        width: "30%"
+        width: "30%",
+        autoClose:  true
     });
 });

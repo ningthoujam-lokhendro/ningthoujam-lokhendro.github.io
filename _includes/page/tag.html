@@ -1,0 +1,21 @@
+{% assign t = tag | first %}
+{% assign posts = tag | last %}
+<div class="col-md-6  ">
+  <div class="excerpt">
+    <h2 id="{{t}}">{{ t | capitalize }}</h2>
+    <div class="divider"></div>
+    {% for post in posts %}
+    {% if post.tags contains t %}
+      <div class="row-fluid">
+        <a href="{{post.url}}" style="display:inline-block">
+          <p class="text-muted">
+            <i class="glyphicon glyphicon-leaf"></i>
+            {{ post.title }}
+          </p>
+        </a>
+        <p class="date text-success" style="display:inline-block;font-size: small;font-weight: bold;">{{ post.date | date: "%B %-d, %Y"  }}</p>
+      </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>

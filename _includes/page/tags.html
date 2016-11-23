@@ -1,0 +1,45 @@
+<div id="fh5co-testimonials"  data-section="tags">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-md-12 section-heading text-center">
+  			<h2 class="to-animate">Tag Index</h2>
+  		</div>
+  	</div>
+  	<div class="row tagindex">
+  		<div class="col-md-12">
+  			<div class="box-testimony" style="float:none">
+          <div class="container">
+            <blockquote>
+
+              <div class="tags">
+                <ul class="list-inline">
+                  {% for tag in site.tags%}
+                  {% assign t = tag | first %}
+                  <li class="tagcloud">
+                    <a href="{{ '#' | append: t }}" hidefocus="true" style="outline: none;">
+                    <span>{{ t}}</span>
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+            {% for tag in site.tags %}
+              {% assign loopindex = forloop.index | modulo: 2 %}
+                {% if loopindex == 1 %}
+                  <div class="row">
+                    {% include page/tag.html tag=tag %}
+                {% elsif loopindex == 0 %}
+                    {% include page/tag.html tag=tag %}
+                      </div>
+                {% else %}
+                  {% include page/tag.html tag=tag %}
+                {% endif %}
+            {% endfor %}
+            </blockquote>
+          </div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</div>

@@ -15,15 +15,18 @@
 			 	 			{% for post in posts %}
       		  	  {% if post.title != nil %}
 								<div class="excerpt">
-									<a href="{{post.url}}">
-										<h3>
-											<i class="glyphicon glyphicon-leaf"></i>
-											{{ post.title }}
-										</h3>
-									</a>
-									<p> {{post.date | date: "%b %-d %Y"}}
+									<div class="row-fluid">
+										<a href="{{post.url}}" style="display:inline-block">
+											<h3>
+												<i class="glyphicon glyphicon-leaf"></i>
+												{{ post.title }}
+											</h3>
+										</a>
+										<p class="text-muted" style="display:inline-block">{{post.date | date: "%b %-d %Y"}}</p>
+									</div>
 									<p>{{ post.excerpt }}</p>
 								</div>
+								<div class="divider"></div>
 								{% endif %}
       		  	{% endfor %}
 						</blockquote>

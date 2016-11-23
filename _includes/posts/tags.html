@@ -2,7 +2,9 @@
   <ul class="list-inline">
   {% for tag in page.tags%}
     <li class="tagcloud">
-      <a href="#" hidefocus="true" style="outline: none;"><span>{{ tag }}</span></a>
+      <a href="{{ "/blogs.html" | append: '#' | append: tag  | prepend: baseurl }}" hidefocus="true" style="outline: none;">
+        <span>{{ tag }}</span>
+      </a>
     </li>
   {% endfor %}
   </ul>

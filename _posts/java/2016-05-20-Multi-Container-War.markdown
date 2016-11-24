@@ -4,7 +4,7 @@ title:  "Multi Container War"
 date:   2015-05-22 15:40:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
-tags: ['war','tomcat','weblogic','Jboss','web.xml']
+tags: ['war','tomcat','weblogic','jboss','web.xml']
 ---
 To package a web application to be deployable in multiple container, deployment descriptor is needed for each of the specific container. The deployment descriptor `web.xml` is the standard descriptor for the servlet container.
 

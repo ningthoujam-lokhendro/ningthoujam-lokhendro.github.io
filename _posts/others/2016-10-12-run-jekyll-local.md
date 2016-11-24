@@ -3,7 +3,7 @@ layout: post
 title: Run Jekyll local
 category:	"Others"
 tags:
-- Jekyll
+- jekyll
 excerpt:
   Blog with static site with Jekyll.
 ---

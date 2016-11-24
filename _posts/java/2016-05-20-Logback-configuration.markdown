@@ -4,7 +4,7 @@ title:  "Logback Configuration"
 date:   2015-05-20 14:43:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
-tags: ['Logging','Logback']
+tags: ['logging','logback']
 ---
 * TOC:
 {:toc}

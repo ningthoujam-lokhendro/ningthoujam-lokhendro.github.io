@@ -4,7 +4,7 @@ title:  "Spring ReST Webservice with MySQL"
 date:   2014-04-27 22:22:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
-tags: ['Spring','MySQL','rest']
+tags: ['spring','mySQL','rest']
 ---
 * TOC:
 {:toc}

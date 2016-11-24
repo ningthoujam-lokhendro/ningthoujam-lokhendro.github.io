@@ -6,8 +6,8 @@ category:	"Python"
 author:	Ningthoujam Lokhendro
 tags:
 - python
-- Error
-- Exceptions
+- error
+- exceptions
 excerpt: Python error and exceptions are discuss and how they are handle. Handling error and exceptions can be done in various ways.
 ---
 

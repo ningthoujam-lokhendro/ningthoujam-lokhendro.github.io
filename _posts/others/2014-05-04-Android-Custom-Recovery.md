@@ -4,7 +4,7 @@ title:  "Android Custom Recovery"
 date:   2014-05-04 22:22:05 +0530
 category:	"Others"
 author:	Ningthoujam Lokhendro
-tags: ['android','custom rom','ClockworkMod','rooting']
+tags: ['android','custom rom','clockworkMod','rooting']
 ---
 * TOC:
 {:toc}

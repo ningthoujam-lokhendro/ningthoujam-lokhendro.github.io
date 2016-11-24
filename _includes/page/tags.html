@@ -1,3 +1,4 @@
+{% assign sorted_tags = (site.tags | sort:0) %}
 <div id="fh5co-testimonials"  data-section="tags">
   <div class="container">
   	<div class="row">
@@ -13,18 +14,17 @@
 
               <div class="tags">
                 <ul class="list-inline">
-                  {% for tag in site.tags%}
-                  {% assign t = tag | first %}
+                  {% for tag in sorted_tags %}
                   <li class="tagcloud">
                     <a href="{{ '#' | append: t }}" hidefocus="true" style="outline: none;">
-                    <span>{{ t}}</span>
+                    <span>{{ tag | first }}</span>
                     </a>
                   </li>
                   {% endfor %}
                 </ul>
               </div>
 
-            {% for tag in site.tags %}
+            {% for tag in sorted_tags %}
               {% assign loopindex = forloop.index | modulo: 2 %}
                 {% if loopindex == 1 %}
                   <div class="row">

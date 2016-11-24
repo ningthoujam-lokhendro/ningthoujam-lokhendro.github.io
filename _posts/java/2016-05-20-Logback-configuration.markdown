@@ -5,6 +5,7 @@ date:   2015-05-20 14:43:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
 tags: ['logging','logback']
+excerpt:  Logback configuration in web application.
 ---
 * TOC:
 {:toc}

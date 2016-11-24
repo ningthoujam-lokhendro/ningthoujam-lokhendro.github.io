@@ -5,6 +5,7 @@ date:   2014-05-01 22:22:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
 tags: ['jdbc','database']
+excerpt:  Connection String syntax for the JDBC drivers.
 ---
 * TOC:
 {:toc}

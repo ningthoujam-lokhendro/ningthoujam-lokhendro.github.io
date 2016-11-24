@@ -5,6 +5,7 @@ date:   2016-05-13 23:33:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
 tags: ['pojo','convert','jackson','introspector']
+excerpt:  Library to convert POJO to Map and vice-versa.
 ---
 * TOC:
 {:toc}

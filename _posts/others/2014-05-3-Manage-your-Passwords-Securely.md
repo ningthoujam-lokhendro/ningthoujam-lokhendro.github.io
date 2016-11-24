@@ -5,6 +5,7 @@ date:   2014-05-3 22:22:05 +0530
 category:	"Others"
 author:	Ningthoujam Lokhendro
 tags: ['password','manage']
+excerpt:  Ways to manage password securely.
 ---
 * TOC:
 {:toc}

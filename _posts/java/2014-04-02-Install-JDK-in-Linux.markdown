@@ -5,6 +5,7 @@ date:   2014-04-03 22:22:05 +0530
 category:	"Java"
 author:	Ningthoujam Lokhendro
 tag:  ['installation']
+excerpt:  JDK installation at the linux OS properly.
 ---
 * TOC:
 {:toc}

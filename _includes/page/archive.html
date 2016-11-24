@@ -1,10 +1,13 @@
 {% for category in site.categories %}
 <div id="{{ category | first }}">
-<div id="fh5co-our-services" style="background-color: darkslategrey" data-section="{{ category | first }}">
+<div id="fh5co-our-services" data-section="{{ category | first }}"
+	{% cycle ' style="background:#009688"','', ' style="background:#009688"', ''  %}>
 	<div class="container">
 		<div class="row row-bottom-padded-sm">
 			<div class="col-md-12 section-heading text-center">
-				<h2 class="to-animate" style="color: white">{{ category | first }}</h2>
+				<h2 class="to-animate"
+					{% cycle ' style="color: white"','', ' style="color: white"', ''  %}>
+					{{ category | first }}</h2>
 			</div>
 		</div>
 		<div class="row">

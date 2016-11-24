@@ -6,10 +6,9 @@ category:	"Java"
 author:	Ningthoujam Lokhendro
 tags: ['spring','mySQL','rest']
 ---
+The following tutorial is for creating simple Spring ReST webservice with MySQL. We are going to use Spring framwork to create this simple rest webservice that get data from the database.
 * TOC:
 {:toc}
-
-The following tutorial is for creating simple Spring ReST webservice with MySQL. We are going to use Spring framwork to create this simple rest webservice that get data from the database.
 
 ## What is the Goal?
 * Understand the Spring framwork.

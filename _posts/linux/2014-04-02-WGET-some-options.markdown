@@ -5,6 +5,7 @@ date:   2014-04-02 12:22:05 +0530
 category:	"Linux"
 tags:   ['wget','download']
 author:	Ningthoujam Lokhendro
+excerpt:  Downloading contents with powerfull options of wget.
 ---
 * TOC:
 {:toc}

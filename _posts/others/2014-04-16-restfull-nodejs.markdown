@@ -4,6 +4,7 @@ title:  "Restful Webservice with NodeJs in 5 Min"
 date:   2014-04-16 22:22:05 +0530
 category:	"Others"
 tags:	['web','nodejs','rest']
+excerpt:	NodeJs webservice creation basic.
 ---
 * TOC:
 {:toc}

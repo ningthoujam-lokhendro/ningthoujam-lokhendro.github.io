@@ -15,9 +15,10 @@
               <div class="tags">
                 <ul class="list-inline">
                   {% for tag in sorted_tags %}
+                  {% assign t = tag | first %}
                   <li class="tagcloud">
                     <a href="{{ '#' | append: t }}" hidefocus="true" style="outline: none;">
-                    <span>{{ tag | first }}</span>
+                    <span>{{ t }}</span>
                     </a>
                   </li>
                   {% endfor %}

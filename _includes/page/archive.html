@@ -1,40 +1,34 @@
 {% for category in site.categories %}
 <div id="{{ category | first }}">
-<div id="fh5co-testimonials"  data-section="{{ category | first }}">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading text-center">
-					<h2 class="to-animate">{{ category | first }}</h2>
-				</div>
-			</div>
-			<div class="row">
-				{% for posts in category offset:1 %}
-				<div class="col-md-12">
-					<div class="box-testimony to-animate">
-						<blockquote>
-			 	 			{% for post in posts %}
-      		  	  {% if post.title != nil %}
-								<div class="excerpt">
-									<div class="row-fluid">
-										<a href="{{post.url}}" style="display:inline-block">
-											<h3>
-												<i class="glyphicon glyphicon-leaf"></i>
-												{{ post.title }}
-											</h3>
-										</a>
-										<p class="text-muted" style="display:inline-block">{{post.date | date: "%b %-d %Y"}}</p>
-									</div>
-									<p>{{ post.excerpt }}</p>
-								</div>
-								<div class="divider"></div>
-								{% endif %}
-      		  	{% endfor %}
-						</blockquote>
-					</div>
-				</div>
-      {% endfor %}
+<div id="fh5co-our-services" style="background-color: darkslategrey" data-section="{{ category | first }}">
+	<div class="container">
+		<div class="row row-bottom-padded-sm">
+			<div class="col-md-12 section-heading text-center">
+				<h2 class="to-animate" style="color: white">{{ category | first }}</h2>
 			</div>
 		</div>
+		<div class="row">
+			{% for posts in category offset:1 %}
+			{% for post in posts %}
+			{% if post.title != nil %}
+			<div class="col-md-6">
+				<div class="box to-animate">
+					<div{% cycle ' class="icon colored-1"',' class="icon colored-2"', '
+								class="icon colored-3"', ' class="icon colored-4"'  %}>
+						<span><i class="icon-mustache"></i></span>
+          </div>
+          <p class="text-muted">{{post.date | date: "%b %-d %Y"}}</p>
+          <h2>{{ post.title }}</h2>
+          <div class="divider"></div>
+          <p>{{ post.excerpt }}</p>
+          <a href="{{post.url}}" class="btn btn-default btn-sm">Read More</a>
+				</div>
+			</div>
+			{% endif %}
+			{% endfor %}
+			{% endfor %}
+		</div>
 	</div>
+</div>
 </div>
 {% endfor %}

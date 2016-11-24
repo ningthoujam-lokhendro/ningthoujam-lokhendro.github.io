@@ -7,6 +7,7 @@ $(document).ready(function(){
     $('#toc').BootSideMenu({
         side: "left",
         width: "30%",
-        autoClose:  true
+        autoClose:  true,
+        pushBody: false
     });
 });

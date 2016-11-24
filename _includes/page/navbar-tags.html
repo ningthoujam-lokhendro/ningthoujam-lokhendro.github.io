@@ -11,9 +11,9 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           {% for category in site.categories %}
-          <li class=""><a href="#" data-nav-section="{{ category | first }}"><span>{{ category | first }}</span></a></li>
+          <li class=""><a href="{{baseurl}}/blogs.html#{{ category | first }}"><span>{{ category | first }}</span></a></li>
           {% endfor %}
-          <li class=""><a href="{{baseurl}}/tags.html"><span>Tags</span></a></li>
+          <li class=""><a href="#"><span>Tags</span></a></li>
         </ul>
       </div>
     </nav>

@@ -36,6 +36,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
+
+
 a {
       color: #26C6DA;
 }
@@ -78,8 +80,11 @@ header h2 {
   background-color: white;
   padding: 50px 50px 10px 50px;
   text-align: justify;
-  font-size: x-large;
-  color: #373a3c;
+  font-size: larger;
+}
+
+.post-content p {
+    font-style: italic;
 }
 
 /* Related and Recent Post */

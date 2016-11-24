@@ -18,7 +18,7 @@
                   {% assign t = tag | first %}
                   <li class="tagcloud">
                     <a href="{{ '#' | append: t }}" hidefocus="true" style="outline: none;">
-                    <span>{{ t }}</span>
+                    <span style="color:black;text-transform: capitalize;">{{ t }}</span>
                     </a>
                   </li>
                   {% endfor %}

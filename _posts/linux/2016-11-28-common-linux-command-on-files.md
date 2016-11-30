@@ -11,6 +11,7 @@ excerpt: Some command used in linux.
 {:toc}
 
 ## Finding files
+
 ###	Using `find`
 {% highlight bash %}
 # find all files under `/` with name starting with `index`

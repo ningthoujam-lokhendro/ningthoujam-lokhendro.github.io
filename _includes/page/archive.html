@@ -21,7 +21,9 @@
 						<span><i class="icon-mustache"></i></span>
           </div>
           <p class="text-muted">{{post.date | date: "%b %-d %Y"}}</p>
-          <h2>{{ post.title }}</h2>
+          <a href="{{post.url}}" style="text-decoration: none;">
+    		<h2>{{ post.title }}</h2>
+    	  </a>
           <div class="divider"></div>
           <p>{{ post.excerpt }}</p>
           <a href="{{post.url}}" class="btn btn-default btn-sm">Read More</a>

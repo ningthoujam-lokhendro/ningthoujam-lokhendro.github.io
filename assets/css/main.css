@@ -358,3 +358,8 @@ header h2 {
 
     /* hide it on small screens */
 }
+
+/* Gist embedded style */
+.gist .blob-wrapper table {
+    background-color: aliceblue;
+}

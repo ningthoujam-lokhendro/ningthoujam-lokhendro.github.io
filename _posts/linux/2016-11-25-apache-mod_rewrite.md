@@ -16,6 +16,7 @@ excerpt: Redirection with the apacahe rewrite rule.
 <kbd>mod_rewrite</kbd> is a Apache webserver module for flexible url rewriting. It is part of the standard Apache installation on all platforms. 
 
 ## Basic
+
 ###	Load & activate mod_rewrite
 {% highlight apacheconf %}
 LoadModule mod_rewrite.so
@@ -156,6 +157,7 @@ Server variables are handy for writing complex `mod_rewrite` rules sets. The fol
 {% endhighlight %}
 
 ## Redirect
+
 ###	Files and directory
 {% highlight apacheconf %}
 // single url
@@ -228,7 +230,9 @@ RewriteRule ^test\.php$ test.php? [R,L]
 {% endhighlight %}
 
 ## Security
+
 ###	Authorization
+
 #### Deny access by IP
 
 In most cases using Allow `<IP>` and Deny `<IP>` is better. However you can also control access by IP via mod_rewrite.
@@ -245,6 +249,7 @@ RewriteRule \.(gif|jpg|jpeg|png)$ - [F]
 {% endhighlight %}
 
 ### Protocols
+
 #### Ensure HTTPS
 {% highlight apacheconf %}
 // based on protocol
@@ -259,6 +264,7 @@ RewriteRule ^(.*)$ https://www.example.com/$1 [R=301,L]
 {% endhighlight %}
 
 ## Example rule
+
 ###	Query String
 Check for the specific query string key/value
 {% highlight apacheconf %}
@@ -266,6 +272,7 @@ RewriteCond %{QUERY_STRING}  (&|^)id=admin(&|$)
 {% endhighlight %}
 
 ###	Header check
+
 #### HTTP
 {% highlight apacheconf %}
 RewriteEngine On

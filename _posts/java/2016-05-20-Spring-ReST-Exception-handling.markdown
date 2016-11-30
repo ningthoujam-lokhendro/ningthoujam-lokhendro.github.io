@@ -20,8 +20,10 @@ First lets see how the error controller in springboot can be customize.
 ## Error Controller
 Whenever an error happen, spring directs to <kbd>/error</kbd>. The default configuration is vanila. To spice thing a bit, <kbd>implements</kbd> the `org.springframework.boot.autoconfigure.web.ErrorController`. Now instead of returing valina error message, more detail message is recieved by the client.
 
-<code data-gist-id="ningthoujam-lokhendro/5e700af14326ff08ee9bb30c6640f344" data-gist-line="23-58"></code>
-<!--<script src="https://gist.github.com/ningthoujam-lokhendro/5e700af14326ff08ee9bb30c6640f344.js"></script>-->
+<pre
+  class="language-java"
+  data-jsonp="https://api.github.com/gists/5e700af14326ff08ee9bb30c6640f344">
+</pre>
 
 ## Spring ControllerAdvice
 Spring ControllerAdvice takes a level more and makes the error handling more easy. From the application exception are throws up at any particular point. ControllerAdvice is the single point of entry to handle all exception and let you define how to hanndle for each or group of exception.
@@ -69,7 +71,10 @@ public class ErrorMessage {
 {% endhighlight %}
 
 ### Handle all the exception via ControllerAdvice.
-<script src="https://gist-it.appspot.com/github/ningthoujam-lokhendro/DeviceDetail/blob/master/redis-device-oui/src/main/java/com/ningzeta/deviceOUI/controller/ExceptionProcessor.java?footer=minimal&slice=20:0"></script>
+<pre
+  class="language-java"
+  data-jsonp="https://api.github.com/repos/ningthoujam-lokhendro/DeviceDetail/contents/redis-device-oui/src/main/java/com/ningzeta/deviceOUI/controller/ExceptionProcessor.java">
+</pre>
 
 ### Throw the exception from where relevant and ControllerAdvice will handle it.
 

@@ -10,11 +10,13 @@ excerpt:  Downloading contents with powerfull options of wget.
 * TOC:
 {:toc}
 
-WGET is small and awesome application that comes with all distros as it is under GNU. Anyone who want to get contents from the web server is aware of this. It supports downloading via HTTP, HTTPS and FTP protocol. There are already enough material available about WGET but this article is to get all files in a directory by wget.
+WGET is small and awesome application that comes with all distros as it is under GNU. Anyone who want to get contents from the web server is aware of this. It supports downloading via HTTP, HTTPS and FTP protocol. There are already enough material available about WGET but this article is to about some usual commands.
 
 {% highlight bash %}
 # Downloading a single file content can be as easy as
  wget http://example.com/abc.zip
+
+ wget -O file.zip http://example.com/abc.zip
 
 # But to get all files under a directory by wget pass the –no-parent,
 # otherwise directory index on the site will come.
@@ -22,5 +24,12 @@ WGET is small and awesome application that comes with all distros as it is under
 
 # To avoid downloading the index.html files, use this command:
  wget -r --no-parent --reject "index.html*" http://mysite.com/xyz/
+
+# To download only the current directory.
+# --cut-dirs=n where n is the level of the directory
+wget -r -nH --cut-dirs=6 --no-parent --reject="index.html*"
+
+# Download file that require authentication.
+ wget --http-user=user --http-password=password http://example.com/abc.zip
+
 {% endhighlight %}
-Reference-style:

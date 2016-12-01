@@ -102,6 +102,9 @@ header h2 {
   margin-top: 20px;
   padding-top: 10px;
 }
+.toc-sidebar li {
+  display: block;
+}
 /* Custom bullet at related and recent post */
 .custom-bullet li {
     display: block;

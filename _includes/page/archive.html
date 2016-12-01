@@ -19,14 +19,14 @@
 					<div{% cycle ' class="icon colored-1"',' class="icon colored-2"', '
 								class="icon colored-3"', ' class="icon colored-4"'  %}>
 						<span><i class="icon-mustache"></i></span>
-          </div>
-          <p class="text-muted">{{post.date | date: "%b %-d %Y"}}</p>
-          <a href="{{post.url}}" style="text-decoration: none;">
-    		<h2>{{ post.title }}</h2>
-    	  </a>
-          <div class="divider"></div>
-          <p>{{ post.excerpt }}</p>
-          <a href="{{post.url}}" class="btn btn-default btn-sm">Read More</a>
+          			</div>
+		          <p class="text-muted">{{post.date | date: "%b %-d %Y"}}</p>
+		          <a href="{{post.url}}" style="text-decoration: none;">
+		    		<h2>{{ post.title }}</h2>
+		    	  </a>
+		          <div class="divider"></div>
+		          <p>{{ post.excerpt }}</p>
+		          <a href="{{post.url}}" class="btn btn-default btn-sm">Read More</a>
 				</div>
 			</div>
 			{% endif %}

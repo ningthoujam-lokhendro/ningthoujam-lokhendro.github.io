@@ -49,9 +49,9 @@ If you want to combine the key and the certificate in a pem file
 {% highlight bash %}
 cat certificate.crt privateKey.key > cert.pem
 {% endhighlight %}
-{: .bg-warning}
 
 ##	Add in apache configuration
+
 Edit and add the following the httpd.conf
 {% highlight apacheconf %}
 Listen 443

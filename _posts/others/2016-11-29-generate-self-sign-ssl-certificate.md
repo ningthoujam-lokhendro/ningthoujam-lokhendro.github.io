@@ -43,7 +43,7 @@ openssl req -nodes -x509 -sha256 -days 365 -newkey rsa:2048 -keyout privateKey.k
 You will be prompted to enter your organizational information and a common name. The common name should be the fully qualified domain name for the site you are securing (www.server.com). You can leave the email address, challenge password, and optional company name blank. When the command is finished running, it will create two files: a __privateKey.key__ file and a __certificate.crt__ self signed certificate file valid for 365 days.
 
 > use __*.ningzeta.com__ in __common name__ for generating wildcard certificate
-{: .bg-primary}
+{: .quote-card .green-card }
 
 If you want to combine the key and the certificate in a pem file
 {% highlight bash %}

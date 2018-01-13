@@ -21,7 +21,7 @@ Install [Dockers][Dockers] and [dockers-compose][dockers-compose]. The setup are
 ## Running Jekyll dockers
 Go the directory where your site is and create file name `docker-compose.yaml` with the following content.
 
-{% highlight yaml %}
+```yaml
 version: '3'
 
 services:
@@ -33,7 +33,7 @@ services:
     volumes:
             - ".:/srv/jekyll"
     command: jekyll serve --incremental --force_polling
-{% endhighlight %}
+```
 
 ### Description.
 * <kbd>container_name</kbd> : The name of the container. You can name anything you like relevant but this name will be use if you want to actually log-in to the docker container.

@@ -79,7 +79,7 @@ cp ningzeta.com.pem /etc/httpd/conf/ssl/ningzeta.com.pem
 ### Defining in the Virtual Host.
 Defined the certificate and private key inside the virtual host configuration.
 
-{% highlight bash %}
+```bash
 <VirtualHost *:443>
 	SSLEngine on
 	SSLCertificateFile 	/etc/httpd/conf/ssl/ningzeta.com.crt
@@ -87,6 +87,6 @@ Defined the certificate and private key inside the virtual host configuration.
 
 	# other definitions
 </VirtualHost>
-{% endhighlight %}
+```
 
 `Restart apache` to load the new configuration.

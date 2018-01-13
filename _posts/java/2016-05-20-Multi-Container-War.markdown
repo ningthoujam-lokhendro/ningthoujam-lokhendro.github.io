@@ -16,9 +16,10 @@ Lets take example for a war to be deployable at __Tomcat__, __Weblogic__, __Jbos
 ## Deployment Desscriptor.
 Java web applications use a deployment descriptor file to determine how URLs map to servlets, which URLs require authentication, and other information. This file is named `web.xml`, and resides in the app's WAR under the `WEB-INF/` directory
 For more information, refer [google cloud platform web.xml][1] and [Metawerx web.xml reference wiki][2]
-<div class="alert alert-info">
-<kbd>Servlet container</kbd> uses this deployment descriptor to determine the deployment of the web application.
-</div>
+
+> Servlet container uses this deployment descriptor to determine the deployment of the web application.
+{: .quote-card .green-card }
+
 
 Example `web.xml`: Here servlets are declared and the corresponding servlet mapping. The security is manage why the container.
 <pre
@@ -28,9 +29,9 @@ Example `web.xml`: Here servlets are declared and the corresponding servlet mapp
 
 ## Weblogic
 For the weblogic deployment, weblogic has its own weblogic specific deployment descriptor. This is used only when deployed in the weblogic container and named as 'weblogic.xml'. It resides at the same location as the `web.xml`.
-<div class="alert alert-danger">
-If `weblogic.xml` deployment descriptor is absent, WebLogic Server automatically selects the default values of the deployment descriptor elements.
-</div>
+
+> If `weblogic.xml` deployment descriptor is absent, WebLogic Server automatically selects the default values of the deployment descriptor elements.
+{: .quote-card .red-card }
 For more information, refer [weblogic deployment descriptor][3].
 
 Here is an example `weblogic.xml`: The `prefer-application-packages` here direct weblogic to load the classes that are in the war rather then the in-build/included in the weblogic library. The roles of the security is defined as well.

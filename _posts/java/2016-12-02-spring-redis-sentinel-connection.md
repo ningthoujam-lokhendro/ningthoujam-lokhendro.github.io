@@ -16,15 +16,14 @@ There are good [java clients][] available for the Redis. __Jedis__ is used here 
 If maven is used for the build tool management, check out the list of [jedis release version][].
 
 Include in your POM file:
-{% highlight xml %}
+```xml
 <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
 <dependency>
     <groupId>redis.clients</groupId>
     <artifactId>jedis</artifactId>
     <version>${jedis.version}</version>
 </dependency>
-
-{% endhighlight %}
+```
 
 ##	Sentinel Deployment Example
 Sentinel provide <kbd>high availabity</kbd> for Redis. Certain extends of failure condition is handle by Sentinel without human interaction.
@@ -41,7 +40,7 @@ Check out the [Redis Sentinel Nodes][] for the example deployment.
 The following is using java configuration. XML configuration should be pretty to convert from this.
 
 Lets assume that the sentinel properties are defined in `application.properties` in the classpath.
-{% highlight properties %}
+```properties
 # Pool Configuration
 redis.pool.max-active = 128
 redis.pool.max-idle = 20
@@ -52,12 +51,13 @@ redis.sentinel.node.2.host = redis.node2
 redis.sentinel.node.2.port = 26382
 redis.sentinel.node.3.host = redis.node3
 redis.sentinel.node.3.port = 26383
-{% endhighlight %}
+```
 
 
 > Use yaml structure for defining n nodes. This is make it easier for the real deployment to add new nodes and change the java configuration to loop each nodes.
 {: .quote-card .green-card }
-{% highlight yaml %}
+
+```yaml
 redis:
 	sentinels:
 		node1:
@@ -69,13 +69,11 @@ redis:
 		node3:
 			host:	redis.node3
 			port:	26383
-
-{% endhighlight %}
+```
 
 ### Sentinels Config
 Get the properties values from the application.properties and constuct the `RedisSentinelConfiguration`.
-{% highlight java %}
-
+```java
 // Construct the RedisSentinelNodes by getting the properties.
 RedisSentinelNodes sentinelNodes() {
 	List<RedisSentinelNode> nodes = new ArrayList<RedisSentinelNode>();
@@ -107,10 +105,10 @@ RedisSentinelConfiguration sentinelConfiguration () {
 
 	return sentinelConfig;
 }
-{% endhighlight %}
+```
 
 ### Jedis Connection Bean
-{% highlight java %}
+```java
 @Bean
 RedisConnectionFactory jedisConnectionFactory() {
 
@@ -123,10 +121,10 @@ RedisConnectionFactory jedisConnectionFactory() {
 	jedisConnectionFactory.setPoolConfig(jedisPoolConfig);
 	return jedisConnectionFactory;
 }
-{% endhighlight %}
+```
 
 ### Redis Template Bean
-{% highlight java %}
+```java
 @Bean
 public RedisTemplate<?, ?> redisTemplate() {
 	RedisTemplate<?, ?> redisTemplate = new RedisTemplate<>();
@@ -135,7 +133,7 @@ public RedisTemplate<?, ?> redisTemplate() {
 	redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer());
 	return redisTemplate;
 }
-{% endhighlight %}
+```
 
 > Reference : [Redis Sentinel Documentation][]
 

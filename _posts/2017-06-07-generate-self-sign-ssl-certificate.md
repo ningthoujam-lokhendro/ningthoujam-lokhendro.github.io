@@ -23,12 +23,6 @@ This will generate a file - <kbd>ningzeta.com.key</kbd> which contains the priva
 
 {% highlight bash %}
 openssl genrsa -des3 -out ningzeta.com.key 2048
-
-Generating RSA private key, 2048 bit long modulus
-..................................+++
-................+++
-e is 65537 (0x10001)
-
 {% endhighlight %}
 
 > When apache webserver is restarted, it will ask passphase for key if you have specified to protect the key. Make sure you don't forget the passphrase if you have specified it.
@@ -41,15 +35,6 @@ During the generation of __CSR__, openssl will prompt for several information. T
 
 {% highlight bash %}
 openssl req -new -key ningzeta.com.key -out ningzeta.com.csr
-
-Country Name (2 letter code) [AU]:IN
-State or Province Name (full name) [Some-State]:Karnataka
-Locality Name (eg, city) []:Bangalore
-Organization Name (eg, company) [Internet Widgits Pty Ltd]:Ningzeta
-Organizational Unit Name (eg, section) []:RAND
-Common Name (e.g. server FQDN or YOUR name) []:*.ningzeta.com
-Email Address []:me@ningzeta.com
-
 {% endhighlight %}
 
 At this stage, you will have a CSR file - <kbd>ningzeta.com.csr</kbd>.
@@ -61,20 +46,12 @@ To generate a temporary self-signed certicate for 365 days.
 
 {% highlight bash %}
 openssl x509 -req -days 365 -in ningzeta.com.csr -signkey ningzeta.com.key -out ningzeta.com.crt
-
-Signature ok
-subject=/C=IN/ST=Karnataka/L=Bangalore/O=Ningzeta/OU=RAND/CN=*.ningzeta.com
-Getting Private key
 {% endhighlight %}
 
 The above will use sha1 which is broken now and not supported in the most modern browser. To use __sha2__(sha224, sha256, sha384, sha512 etc), add `-sha256`.
 
 {% highlight bash %}
 openssl x509 -sha256 -req -days 365 -in ningzeta.com.csr -signkey ningzeta.com.key -out ningzeta.com.crt
-
-Signature ok
-subject=/C=IN/ST=Karnataka/L=Bangalore/O=Ningzeta/OU=RAND/CN=*.ningzeta.com
-Getting Private key
 {% endhighlight %}
 
 At this stage, you will have a self-signed certifiacted file - <kbd>ningzeta.com.crt</kbd>.

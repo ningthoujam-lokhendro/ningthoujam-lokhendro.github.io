@@ -68,13 +68,13 @@ The following steps are use to configure apache to use the above generated certi
 ### Storing the Private Key and Certificate.
 The location can be anywhere in the local filesystem but most common place to store is inside the apache directory. If you are using the pem file, store the pem file in the same location.
 
-{% highlight bash %}
+```bash
 cp ningzeta.com.crt /etc/httpd/conf/ssl/ningzeta.com.crt
 cp ningzeta.com.key /etc/httpd/conf/ssl/ningzeta.com.key
 
 # for pem file
 cp ningzeta.com.pem /etc/httpd/conf/ssl/ningzeta.com.pem
-{% endhighlight %}
+```
 
 ### Defining in the Virtual Host.
 Defined the certificate and private key inside the virtual host configuration.

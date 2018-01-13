@@ -17,7 +17,7 @@ Documenting ReST webservice is a must and it is also tedius task. With every min
 
 ## Dependencies
 The following maven dependencies are to be added.
-{% highlight xml %}
+```xml
 <properties>
     <spring-fox.version>2.3.1</spring-fox.version>
 </properties>
@@ -33,7 +33,7 @@ The following maven dependencies are to be added.
   <artifactId>springfox-swagger-ui</artifactId>
   <version>${spring-fox.version}</version>
 </dependency>
-{% endhighlight %}
+```
 
 ## Configuration Class
 The following configuration class in spring configuration is used to configure the springfox. More for information, refer [springfox documentaion][springfox documentaion]

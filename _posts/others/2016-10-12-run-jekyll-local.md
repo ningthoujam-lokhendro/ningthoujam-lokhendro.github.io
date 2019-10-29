@@ -94,6 +94,12 @@ rake page title="My Page"
   data-jsonp="https://api.github.com/repos/ningthoujam-lokhendro/ningthoujam-lokhendro.github.io/contents/Rakefile">
 </pre>
 
+## Run locally
+To see the local build for the site,
+{% highlight bash %}
+bundle exec jekyll serve --incremental
+{% endhighlight %}
+
 [1]:  http://rubyinstaller.org/downloads/
 [2]:  http://rubyinstaller.org/downloads/
 [3]:  http://jekyllrb.com/docs/plugins/

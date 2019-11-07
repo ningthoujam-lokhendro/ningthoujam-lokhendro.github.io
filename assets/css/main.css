@@ -36,12 +36,18 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
+.table {
+    width: 0;
+}
+
 .table td:first-child {
-    text-align: center;
+    text-align: justify;
 }
 
 th {
   text-align: center;
+  background-color: #009688;
+  color: white;
 }
 
 a {
@@ -86,7 +92,7 @@ header h2 {
   background-color: white;
   padding: 50px 50px 10px 50px;
   text-align: justify;
-  font-size: larger;
+  font-size: large;
 }
 
 .post-content p {

@@ -34,3 +34,13 @@ bundle exec jekyll serve
 
 ```
 
+## Using the rake
+
+```bash
+# Create a page
+rake page name="PageName.html"
+
+# Create a Blog post
+rake post title="A Title" [date="YYYY-MM-DD"] [tags="tag1,tag2"] [category="category"]
+
+```
